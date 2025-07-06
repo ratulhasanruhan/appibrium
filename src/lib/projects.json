@@ -1,0 +1,39 @@
+[
+  {
+    "title": "E-Commerce Mobile App",
+    "category": "Mobile Development",
+    "description": "Native iOS and Android app with real-time inventory, secure payments, and personalized shopping experience.",
+    "technologies": ["React Native", "Node.js", "MongoDB", "Stripe"]
+  },
+  {
+    "title": "Healthcare Management Platform",
+    "category": "Web Development", 
+    "description": "Comprehensive web platform for patient management, appointment scheduling, and telemedicine integration.",
+    "technologies": ["React", "Python", "PostgreSQL", "AWS"]
+  },
+  {
+    "title": "IoT Monitoring System",
+    "category": "Embedded Systems",
+    "description": "Real-time monitoring solution for industrial equipment with predictive maintenance capabilities.",
+    "technologies": ["C++", "Python", "InfluxDB", "Grafana"]
+  },
+  {
+    "title": "Financial Trading Platform",
+    "category": "Full-Stack Development",
+    "description": "High-performance trading platform with real-time data processing and advanced analytics.",
+    "technologies": ["Vue.js", "Java", "Redis", "WebSocket"]
+  },
+  {
+    "title": "Educational Learning App",
+    "category": "Mobile Development",
+    "description": "Interactive learning platform with gamification, progress tracking, and offline capabilities.",
+    "technologies": ["Flutter", "Firebase", "Node.js", "MongoDB"]
+  },
+  {
+    "title": "Enterprise Resource Planning",
+    "category": "Enterprise Solution",
+    "description": "Comprehensive ERP system integrating inventory, HR, finance, and customer management modules.",
+    "technologies": ["Angular", ".NET", "SQL Server", "Azure"]
+  }
+]
+
