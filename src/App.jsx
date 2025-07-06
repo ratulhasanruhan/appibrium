@@ -26,7 +26,8 @@ import {
   Sun,
   Moon,
   ChevronDown,
-  BrainCircuit
+  BrainCircuit,
+  Facebook
 } from 'lucide-react'
 import logoIcon from './assets/mini_fav.png'
 import logoText from './assets/txt_b.png'
@@ -520,27 +521,27 @@ function App() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-primary" />
-                  <span className="text-gray-600 dark:text-gray-300">hello@appibrium.com</span>
+                  <span className="text-gray-600 dark:text-gray-300">hello@appibrium.xyz</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-primary" />
-                  <span className="text-gray-600 dark:text-gray-300">+1 (555) 123-4567</span>
+                  <span className="text-gray-600 dark:text-gray-300">+880 1789536985</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-primary" />
-                  <span className="text-gray-600 dark:text-gray-300">San Francisco, CA</span>
+                  <span className="text-gray-600 dark:text-gray-300">57/5 Panthapath, Dhaka-1205, BD</span>
                 </div>
               </div>
               
               <div className="flex space-x-4 mt-8">
-                <Button variant="outline" size="sm">
+                <Button variant="outline" size="sm" onClick={() => window.open('https://github.com/appibrium', '_blank')}>
                   <Github className="w-4 h-4" />
                 </Button>
-                <Button variant="outline" size="sm">
+                <Button variant="outline" size="sm" onClick={() => window.open('https://www.linkedin.com/company/appibrium', '_blank')}>
                   <Linkedin className="w-4 h-4" />
                 </Button>
-                <Button variant="outline" size="sm">
-                  <Twitter className="w-4 h-4" />
+                <Button variant="outline" size="sm" onClick={() => window.open('https://www.facebook.com/appibrium', '_blank')}>
+                  <Facebook className="w-4 h-4" />
                 </Button>
               </div>
             </div>
@@ -614,21 +615,20 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <img src={logoIcon} alt="Appibrium" className="w-8 h-8" />
                 <img src={logoWhite} alt="Appibrium" className="h-6" />
               </div>
               <p className="text-gray-400 mb-4">
                 Innovative software solutions for every platform. Transform your business with cutting-edge technology.
               </p>
               <div className="flex space-x-4">
-                <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white">
+                <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white" onClick={() => window.open('https://github.com/appibrium', '_blank')}>
                   <Github className="w-4 h-4" />
                 </Button>
-                <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white">
+                <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white" onClick={() => window.open('https://www.linkedin.com/company/appibrium', '_blank')}>
                   <Linkedin className="w-4 h-4" />
                 </Button>
-                <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white">
-                  <Twitter className="w-4 h-4" />
+                <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white" onClick={() => window.open('https://www.facebook.com/appibrium', '_blank')}>
+                  <Facebook className="w-4 h-4" />
                 </Button>
               </div>
             </div>
@@ -657,15 +657,15 @@ function App() {
             <div>
               <h3 className="font-semibold mb-4">Contact</h3>
               <ul className="space-y-2 text-gray-400">
-                <li>hello@appibrium.com</li>
-                <li>+1 (555) 123-4567</li>
-                <li>San Francisco, CA</li>
+                <li>hello@appibrium.xyz</li>
+                <li>+880 1789536985</li>
+                <li>57/5 Panthapath, Dhaka-1205, BD</li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Appibrium. All rights reserved.</p>
+            <p>&copy; 2025 Appibrium. All rights reserved.</p>
           </div>
         </div>
       </footer>
