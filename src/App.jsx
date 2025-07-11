@@ -186,8 +186,8 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <img src={logoText} alt="Appibrium" className="h-6 dark:hidden" />
-              <img src={logoWhite} alt="Appibrium" className="h-6 hidden dark:block" />
+              <img src={logoText} alt="Appibrium" className="h-12 dark:hidden" />
+              <img src={logoWhite} alt="Appibrium" className="h-12 hidden dark:block" />
             </div>
             
             {/* Desktop Navigation */}
@@ -618,7 +618,7 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <img src={logoWhite} alt="Appibrium" className="h-6" />
+                <img src={logoWhite} alt="Appibrium" className="h-14" />
               </div>
               <p className="text-gray-400 mb-4">
                 Innovative software solutions for every platform. Transform your business with cutting-edge technology.
