@@ -554,39 +554,40 @@ function App() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <form className="space-y-4">
+                <form className="space-y-4" action="https://formspree.io/f/mnnvewee" method="POST">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                         First Name
                       </label>
-                      <Input placeholder="John" />
+                      <Input name="firstName" placeholder="John" required />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                         Last Name
                       </label>
-                      <Input placeholder="Doe" />
+                      <Input name="lastName" placeholder="Doe" required />
                     </div>
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                       Email
                     </label>
-                    <Input type="email" placeholder="john@example.com" />
+                    <Input name="email" type="email" placeholder="john@example.com" required />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                       Project Type
                     </label>
-                    <select className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
-                      <option>Mobile App Development</option>
-                      <option>Web Development</option>
-                      <option>Desktop Software</option>
-                      <option>Embedded Systems</option>
-                      <option>Full-Stack Solution</option>
-                      <option>AI/ML Services</option>
-                      <option>Consulting</option>
+                    <select name="projectType" className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white" required>
+                      <option value="">Select a project type</option>
+                      <option value="Mobile App Development">Mobile App Development</option>
+                      <option value="Web Development">Web Development</option>
+                      <option value="Desktop Software">Desktop Software</option>
+                      <option value="Embedded Systems">Embedded Systems</option>
+                      <option value="Full-Stack Solution">Full-Stack Solution</option>
+                      <option value="AI/ML Services">AI/ML Services</option>
+                      <option value="Consulting">Consulting</option>
                     </select>
                   </div>
                   <div>
@@ -594,8 +595,10 @@ function App() {
                       Message
                     </label>
                     <Textarea 
+                      name="message"
                       placeholder="Tell us about your project requirements..."
                       rows={4}
+                      required
                     />
                   </div>
                   <Button type="submit" className="w-full">
