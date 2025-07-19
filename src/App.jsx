@@ -192,7 +192,7 @@ function App() {
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              {['services', 'portfolio', 'about', 'process', 'technologies', 'contact'].map((item) => (
+              {['services', 'portfolio', 'about', 'contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -205,6 +205,12 @@ function App() {
                   {item}
                 </button>
               ))}
+              <button
+                onClick={() => window.open('https://careers.appibrium.tech', '_blank')}
+                className="capitalize transition-colors text-gray-600 dark:text-gray-300 hover:text-primary"
+              >
+                Careers
+              </button>
               <Button onClick={toggleDarkMode} variant="ghost" size="sm">
                 {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
               </Button>
@@ -233,7 +239,7 @@ function App() {
         {isMenuOpen && (
           <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-700">
             <div className="px-4 py-2 space-y-2">
-              {['services', 'portfolio', 'about', 'process', 'technologies', 'contact'].map((item) => (
+              {['services', 'portfolio', 'about', 'contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -242,6 +248,12 @@ function App() {
                   {item}
                 </button>
               ))}
+              <button
+                onClick={() => window.open('https://careers.appibrium.tech', '_blank')}
+                className="block w-full text-left px-3 py-2 capitalize text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
+              >
+                Careers
+              </button>
             </div>
           </div>
         )}
