@@ -32,6 +32,7 @@ import {
 import logoIcon from './assets/mini_fav.png'
 import logoText from './assets/txt_b.png'
 import logoWhite from './assets/twx_wh.png'
+import appibriumBanner from './assets/appibrium_banner.png'
 import './App.css'
 
 function App() {
@@ -402,9 +403,11 @@ function App() {
               </div>
             </div>
             <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                <Code className="w-24 h-24 text-primary/60" />
-              </div>
+              <img 
+                src={appibriumBanner} 
+                alt="Appibrium Team" 
+                className="w-full h-64 md:h-96 object-cover rounded-lg mb-4"
+              />
               <p className="text-lg text-gray-600 dark:text-gray-300 text-center">
                 Innovation Through Code
               </p>
