@@ -49,7 +49,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'services', 'portfolio', 'about', 'process', 'technologies', 'testimonials', 'contact']
+      const sections = ['home', 'services', 'products', 'portfolio', 'about', 'process', 'technologies', 'testimonials', 'contact']
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -145,6 +145,36 @@ function App() {
     { name: "Scikit-learn", category: "AI/ML", icon: <BrainCircuit className="w-6 h-6" /> }
   ]
 
+  const products = [
+    {
+      name: "GoruSheba",
+      description: "Bangladesh's first intelligent cattle management system powered by AI & IoT. From health to feeding, weight to vet support — everything your cow needs, now in one app!",
+      category: "Agriculture Tech",
+      technologies: ["Flutter", "AI/ML", "IoT", "Python"],
+      image: "https://via.placeholder.com/400x300/3B82F6/FFFFFF?text=GoruSheba",
+      link: "#",
+      features: ["Cattle profiles", "QR codes", "Photo-based weight", "Expense tracker", "Vet support"]
+    },
+    {
+      name: "DokanMate",
+      description: "In a world of overloaded POS apps, we chose simplicity. DokanMate brings essential tools to run your business – no clutter, just clarity.",
+      category: "Business Solution",
+      technologies: ["Flutter", "Node.js", "MongoDB", "AWS"],
+      image: "https://via.placeholder.com/400x300/10B981/FFFFFF?text=DokanMate",
+      link: "#",
+      features: ["POS system", "Inventory management", "Sales tracking", "Customer management"]
+    },
+    {
+      name: "Porichoy",
+      description: "Easy CV and web maker for every person. Minimize the time it takes to initiate a relationship between you and the customer with our powerful platform.",
+      category: "Personal Branding",
+      technologies: ["React", "Node.js", "MongoDB", "AWS"],
+      image: "https://via.placeholder.com/400x300/8B5CF6/FFFFFF?text=Porichoy",
+      link: "http://porichoy.me/",
+      features: ["CV Builder", "Web Profile", "Dark/Light Mode", "Multi-language", "Control Panel"]
+    }
+  ]
+
   const processSteps = [
     {
       step: "01",
@@ -202,7 +232,7 @@ function App() {
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              {['services', 'portfolio', 'about', 'contact'].map((item) => (
+              {['services', 'products', 'portfolio', 'about', 'contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -249,7 +279,7 @@ function App() {
         {isMenuOpen && (
           <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-700">
             <div className="px-4 py-2 space-y-2">
-              {['services', 'portfolio', 'about', 'contact'].map((item) => (
+              {['services', 'products', 'portfolio', 'about', 'contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -326,6 +356,65 @@ function App() {
                       </Badge>
                     ))}
                   </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Products Section */}
+      <section id="products" className="pt-20 pb-12 bg-gray-50 dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+			Appibrium Originals
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              We don't just build for others — we build for the world. Here are the tools and solutions born inside Appibrium.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {products.map((product, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <div className="relative">
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="w-full h-40 object-cover"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <Badge variant="secondary" className="bg-white/90 text-gray-800">
+                      {product.category}
+                    </Badge>
+                  </div>
+                </div>
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-lg">{product.name}</CardTitle>
+                  <CardDescription className="text-sm line-clamp-2">
+                    {product.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <div className="mb-3">
+                    <div className="flex flex-wrap gap-2">
+                      {product.technologies.map((tech, techIndex) => (
+                        <Badge key={techIndex} variant="outline" className="text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                  <Button 
+                    onClick={() => window.open(product.link, '_blank')}
+                    className="w-full"
+                    variant="outline"
+                    size="sm"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
                 </CardContent>
               </Card>
             ))}
