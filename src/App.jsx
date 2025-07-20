@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge.jsx'
 import { Input } from '@/components/ui/input.jsx'
 import { Textarea } from '@/components/ui/textarea.jsx'
+import { Analytics } from "@vercel/analytics/react"
 import {
   Menu,
   X,
@@ -568,6 +569,9 @@ function App() {
               </div>
             </div>
             
+			<Analytics />
+
+
             <Card>
               <CardHeader>
                 <CardTitle>Send us a message</CardTitle>
