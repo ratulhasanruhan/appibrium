@@ -27,7 +27,12 @@ import {
   Moon,
   ChevronDown,
   BrainCircuit,
-  Facebook
+  Facebook,
+  Database,
+  Cloud,
+  Terminal,
+  Zap,
+  Wifi
 } from 'lucide-react'
 import logoIcon from './assets/mini_fav.png'
 import logoText from './assets/txt_b.png'
@@ -116,24 +121,26 @@ function App() {
   ]
 
   const technologies = [
-    { name: "React", category: "Frontend" },
-    { name: "Vue.js", category: "Frontend" },
-    { name: "Angular", category: "Frontend" },
-    { name: "Node.js", category: "Backend" },
-    { name: "Python", category: "Backend" },
-    { name: "Java", category: "Backend" },
-    { name: "Swift", category: "Mobile" },
-    { name: "Kotlin", category: "Mobile" },
-    { name: "React Native", category: "Mobile" },
-    { name: "Flutter", category: "Mobile" },
-    { name: "PostgreSQL", category: "Database" },
-    { name: "MongoDB", category: "Database" },
-    { name: "AWS", category: "Cloud" },
-    { name: "Docker", category: "DevOps" },
-    { name: "Kubernetes", category: "DevOps" },
-    { name: "TensorFlow", category: "AI/ML" },
-    { name: "PyTorch", category: "AI/ML" },
-    { name: "Scikit-learn", category: "AI/ML" }
+    { name: "React", category: "Frontend", icon: <Code className="w-6 h-6" /> },
+    { name: "Vue.js", category: "Frontend", icon: <Globe className="w-6 h-6" /> },
+    { name: "Angular", category: "Frontend", icon: <Layers className="w-6 h-6" /> },
+    { name: "Node.js", category: "Backend", icon: <Terminal className="w-6 h-6" /> },
+    { name: "Python", category: "Backend", icon: <Code className="w-6 h-6" /> },
+    { name: "Java", category: "Backend", icon: <Cpu className="w-6 h-6" /> },
+    { name: "Swift", category: "Mobile", icon: <Smartphone className="w-6 h-6" /> },
+    { name: "Kotlin", category: "Mobile", icon: <Smartphone className="w-6 h-6" /> },
+    { name: "React Native", category: "Mobile", icon: <Smartphone className="w-6 h-6" /> },
+    { name: "Flutter", category: "Mobile", icon: <Smartphone className="w-6 h-6" /> },
+    { name: "PostgreSQL", category: "Database", icon: <Database className="w-6 h-6" /> },
+    { name: "MongoDB", category: "Database", icon: <Database className="w-6 h-6" /> },
+    { name: "MySQL", category: "Database", icon: <Database className="w-6 h-6" /> },
+    { name: "AWS", category: "Cloud", icon: <Cloud className="w-6 h-6" /> },
+    { name: "Docker", category: "DevOps", icon: <Terminal className="w-6 h-6" /> },
+    { name: "Kubernetes", category: "DevOps", icon: <Zap className="w-6 h-6" /> },
+    { name: "IoT", category: "Embedded", icon: <Wifi className="w-6 h-6" /> },
+    { name: "TensorFlow", category: "AI/ML", icon: <BrainCircuit className="w-6 h-6" /> },
+    { name: "PyTorch", category: "AI/ML", icon: <BrainCircuit className="w-6 h-6" /> },
+    { name: "Scikit-learn", category: "AI/ML", icon: <BrainCircuit className="w-6 h-6" /> }
   ]
 
   const processSteps = [
@@ -462,7 +469,7 @@ function App() {
             {technologies.map((tech, index) => (
               <div key={index} className="text-center p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Code className="w-6 h-6 text-primary" />
+                  {tech.icon || <Code className="w-6 h-6 text-primary" />}
                 </div>
                 <h3 className="font-medium text-gray-900 dark:text-white mb-1">{tech.name}</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">{tech.category}</p>
