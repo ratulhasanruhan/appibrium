@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge.jsx'
 import { Input } from '@/components/ui/input.jsx'
 import { Textarea } from '@/components/ui/textarea.jsx'
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import {
   Menu,
   X,
@@ -569,9 +570,6 @@ function App() {
               </div>
             </div>
             
-			<Analytics />
-
-
             <Card>
               <CardHeader>
                 <CardTitle>Send us a message</CardTitle>
@@ -698,6 +696,10 @@ function App() {
           </div>
         </div>
       </footer>
+      
+      {/* Vercel Analytics & Speed Insights */}
+      <Analytics />
+      <SpeedInsights />
     </div>
   )
 }
