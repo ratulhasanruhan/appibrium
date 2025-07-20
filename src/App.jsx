@@ -151,8 +151,8 @@ function App() {
       description: "Bangladesh's first intelligent cattle management system powered by AI & IoT. From health to feeding, weight to vet support — everything your cow needs, now in one app!",
       category: "Agriculture Tech",
       technologies: ["Flutter", "AI/ML", "IoT", "Python"],
-      image: "https://via.placeholder.com/400x300/3B82F6/FFFFFF?text=GoruSheba",
-      link: "#",
+      image: "https://raw.githubusercontent.com/appibrium/company-profile/main/appibrium_originals/gorusheba_banner.png",
+      link: "https://www.facebook.com/gorusheba/",
       features: ["Cattle profiles", "QR codes", "Photo-based weight", "Expense tracker", "Vet support"]
     },
     {
@@ -160,8 +160,8 @@ function App() {
       description: "In a world of overloaded POS apps, we chose simplicity. DokanMate brings essential tools to run your business – no clutter, just clarity.",
       category: "Business Solution",
       technologies: ["Flutter", "Node.js", "MongoDB", "AWS"],
-      image: "https://via.placeholder.com/400x300/10B981/FFFFFF?text=DokanMate",
-      link: "#",
+      image: "https://raw.githubusercontent.com/appibrium/company-profile/main/appibrium_originals/dokanmate.png",
+      link: "https://www.facebook.com/dokanmate",
       features: ["POS system", "Inventory management", "Sales tracking", "Customer management"]
     },
     {
@@ -169,7 +169,7 @@ function App() {
       description: "Easy CV and web maker for every person. Minimize the time it takes to initiate a relationship between you and the customer with our powerful platform.",
       category: "Personal Branding",
       technologies: ["React", "Node.js", "MongoDB", "AWS"],
-      image: "https://via.placeholder.com/400x300/8B5CF6/FFFFFF?text=Porichoy",
+      image: "https://raw.githubusercontent.com/appibrium/company-profile/main/appibrium_originals/porichoy_white.png",
       link: "http://porichoy.me/",
       features: ["CV Builder", "Web Profile", "Dark/Light Mode", "Multi-language", "Control Panel"]
     }
