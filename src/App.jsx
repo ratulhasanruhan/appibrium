@@ -232,7 +232,7 @@ function App() {
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              {['services', 'products', 'portfolio', 'about', 'contact'].map((item) => (
+              {['services', 'products', 'portfolio', 'about'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -250,6 +250,16 @@ function App() {
                 className="capitalize transition-colors text-gray-600 dark:text-gray-300 hover:text-primary"
               >
                 Careers
+              </button>
+              <button
+                onClick={() => scrollToSection('contact')}
+                className={`capitalize transition-colors ${
+                  activeSection === 'contact' 
+                    ? 'text-primary font-medium' 
+                    : 'text-gray-600 dark:text-gray-300 hover:text-primary'
+                }`}
+              >
+                Contact
               </button>
               <Button onClick={toggleDarkMode} variant="ghost" size="sm">
                 {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
@@ -279,7 +289,7 @@ function App() {
         {isMenuOpen && (
           <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-700">
             <div className="px-4 py-2 space-y-2">
-              {['services', 'products', 'portfolio', 'about', 'contact'].map((item) => (
+              {['services', 'products', 'portfolio', 'about'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -293,6 +303,12 @@ function App() {
                 className="block w-full text-left px-3 py-2 capitalize text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
               >
                 Careers
+              </button>
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="block w-full text-left px-3 py-2 capitalize text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
+              >
+                Contact
               </button>
             </div>
           </div>
@@ -763,10 +779,10 @@ function App() {
             <div>
               <h3 className="font-semibold mb-4">Company</h3>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Portfolio</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+                <li><a href="#about" onClick={() => scrollToSection('about')} className="hover:text-white transition-colors cursor-pointer">About Us</a></li>
+                <li><a href="#portfolio" onClick={() => scrollToSection('portfolio')} className="hover:text-white transition-colors cursor-pointer">Portfolio</a></li>
+                <li><a href="https://careers.appibrium.tech" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Careers</a></li>
+                <li><a href="#contact" onClick={() => scrollToSection('contact')} className="hover:text-white transition-colors cursor-pointer">Contact</a></li>
               </ul>
             </div>
             
