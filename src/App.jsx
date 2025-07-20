@@ -377,12 +377,12 @@ function App() {
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {products.map((product, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 overflow-hidden p-0">
                 <div className="relative">
                   <img 
                     src={product.image} 
                     alt={product.name}
-                    className="w-full h-40 object-cover"
+                    className="w-full h-48 object-cover"
                   />
                   <div className="absolute top-4 left-4">
                     <Badge variant="secondary" className="bg-white/90 text-gray-800">
@@ -390,13 +390,13 @@ function App() {
                     </Badge>
                   </div>
                 </div>
-                <CardHeader className="pb-3">
+                <CardHeader className="pb-3 px-6 pt-4">
                   <CardTitle className="text-lg">{product.name}</CardTitle>
                   <CardDescription className="text-sm line-clamp-2">
                     {product.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="pt-0">
+                <CardContent className="pt-0 px-6 pb-6">
                   <div className="mb-3">
                     <div className="flex flex-wrap gap-2">
                       {product.technologies.map((tech, techIndex) => (
