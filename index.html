@@ -130,6 +130,29 @@
       }
     }
     </script>
+
+    <!-- Bengali SEO Meta Tags -->
+    <meta name="title" content="এপিব্রিয়াম - সফটওয়্যার কোম্পানি | মোবাইল অ্যাপ, ওয়েব ডেভেলপমেন্ট, এমবেডেড সিস্টেমস" lang="bn" />
+    <meta name="description" content="এপিব্রিয়াম বাংলাদেশের একটি শীর্ষ সফটওয়্যার কোম্পানি। মোবাইল অ্যাপ, ওয়েব ডেভেলপমেন্ট, এমবেডেড সিস্টেমস এবং কাস্টম সফটওয়্যার সলিউশনস।" lang="bn" />
+    <meta name="keywords" content="এপিব্রিয়াম, সফটওয়্যার কোম্পানি, মোবাইল অ্যাপ ডেভেলপমেন্ট, ওয়েব ডেভেলপমেন্ট, এমবেডেড সিস্টেম, বাংলাদেশ, ঢাকা, Appibrium, software company, bangla software, custom software, AI, IoT" lang="bn" />
+    <meta name="language" content="Bengali" />
+    <!-- End Bengali SEO Meta Tags -->
+
+    <!-- Bengali Tagline in Hero Section (add after main English headline) -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var hero = document.querySelector('section#home .text-center h1');
+        if(hero) {
+          var bnTag = document.createElement('div');
+          bnTag.textContent = 'এপিব্রিয়াম - আপনার আস্থার সফটওয়্যার কোম্পানি';
+          bnTag.style.fontSize = '1.25rem';
+          bnTag.style.color = '#18CB96';
+          bnTag.style.marginTop = '0.5rem';
+          bnTag.style.fontWeight = 'bold';
+          hero.parentNode.insertBefore(bnTag, hero.nextSibling);
+        }
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>
