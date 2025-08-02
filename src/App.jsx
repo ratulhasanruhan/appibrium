@@ -152,7 +152,7 @@ function App() {
       category: "Agriculture Tech",
       technologies: ["Flutter", "AI/ML", "IoT", "Python"],
       image: "https://raw.githubusercontent.com/appibrium/company-profile/main/appibrium_originals/gorusheba_banner.png",
-      link: "https://www.facebook.com/gorusheba/",
+      link: "https://gorusheba.vercel.app/",
       features: ["Cattle profiles", "QR codes", "Photo-based weight", "Expense tracker", "Vet support"]
     },
     {
