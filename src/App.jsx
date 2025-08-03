@@ -152,8 +152,8 @@ function App() {
       category: "Agriculture Tech",
       technologies: ["Flutter", "AI/ML", "IoT", "Python"],
       image: "https://raw.githubusercontent.com/appibrium/company-profile/main/appibrium_originals/gorusheba_banner.png",
-      link: "https://gorusheba.vercel.app/",
-      features: ["Cattle profiles", "QR codes", "Photo-based weight", "Expense tracker", "Vet support"]
+      link: "https://goru.help/",
+      features: ["Cattle profiles", "QR codes", "Photo-based weight", "Farm Monitoring", "Vet support"]
     },
     {
       name: "DokanMate",
@@ -219,10 +219,10 @@ function App() {
     }
   ]
 
-  return (
+    return (
     <div className={`min-h-screen ${isDarkMode ? 'dark' : ''}`}>
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 z-50">
+          {/* Navigation */}
+          <nav className="fixed top-0 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
@@ -783,6 +783,7 @@ function App() {
                 <li><a href="#portfolio" onClick={() => scrollToSection('portfolio')} className="hover:text-white transition-colors cursor-pointer">Portfolio</a></li>
                 <li><a href="https://careers.appibrium.tech" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Careers</a></li>
                 <li><a href="#contact" onClick={() => scrollToSection('contact')} className="hover:text-white transition-colors cursor-pointer">Contact</a></li>
+                <li><a href="/legal.html" target="_blank" className="hover:text-white transition-colors">Legal & Privacy</a></li>
               </ul>
             </div>
             
@@ -802,7 +803,7 @@ function App() {
         </div>
       </footer>
       
-      {/* Vercel Analytics & Speed Insights */}
+                  {/* Vercel Analytics & Speed Insights */}
       <Analytics />
       <SpeedInsights />
     </div>

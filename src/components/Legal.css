@@ -1,0 +1,64 @@
+/* Legal Component Styles */
+.prose {
+  max-width: none;
+}
+
+.prose h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.prose ul {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.25rem;
+}
+
+/* Dark mode prose adjustments */
+.dark .prose {
+  color: #d1d5db;
+}
+
+.dark .prose h3 {
+  color: #f9fafb;
+}
+
+/* Tab button hover effects */
+.legal-tab-button:hover {
+  transform: translateY(-1px);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Card hover effects */
+.legal-card {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.legal-card:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .legal-tabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .legal-tab-button {
+    width: 100%;
+    justify-content: center;
+  }
+} 
