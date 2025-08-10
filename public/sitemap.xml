@@ -52,6 +52,13 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://play.google.com/store/apps/dev?id=6109039901707570348</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
   <!-- Legal Page -->
   <url>
     <loc>https://appibrium.tech/legal.html</loc>
