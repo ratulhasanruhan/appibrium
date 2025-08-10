@@ -34,9 +34,10 @@ import {
   Cloud,
   Terminal,
   Zap,
-  Wifi
+  Wifi,
+  Play,
+  Store
 } from 'lucide-react'
-import logoIcon from './assets/mini_fav.png'
 import logoText from './assets/txt_b.png'
 import logoWhite from './assets/twx_wh.png'
 import appibriumBanner from './assets/appibrium_banner.png'
@@ -672,6 +673,9 @@ function App() {
                 <Button variant="outline" size="sm" onClick={() => window.open('https://www.facebook.com/appibrium', '_blank')}>
                   <Facebook className="w-4 h-4" />
                 </Button>
+                <Button variant="outline" size="sm" onClick={() => window.open('https://play.google.com/store/apps/dev?id=6109039901707570348', '_blank')}>
+                  <span className="w-4 h-4 flex items-center justify-center text-sm font-bold">G</span>
+                </Button>
               </div>
             </div>
             
@@ -761,6 +765,9 @@ function App() {
                 </Button>
                 <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white" onClick={() => window.open('https://www.facebook.com/appibrium', '_blank')}>
                   <Facebook className="w-4 h-4" />
+                </Button>
+                <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white" onClick={() => window.open('https://play.google.com/store/apps/dev?id=6109039901707570348', '_blank')}>
+                  <span className="w-4 h-4 flex items-center justify-center text-sm font-bold">G</span>
                 </Button>
               </div>
             </div>
