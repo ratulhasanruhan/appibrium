@@ -1,39 +1,50 @@
 [
   {
-    "title": "E-Commerce Mobile App",
-    "category": "Mobile Development",
-    "description": "Native iOS and Android app with real-time inventory, secure payments, and personalized shopping experience.",
-    "technologies": ["React Native", "Node.js", "MongoDB", "Stripe"]
+    "title": "Junior Cambrian",
+    "category": "EdTech",
+    "description": "An innovative Learning Management System (LMS) with gamification features designed to enhance student engagement. Includes interactive lessons, progress tracking, achievement badges, and collaborative learning tools.",
+    "technologies": ["React", "Node.js", "MongoDB", "Socket.io", "JWT"],
+    "image": "https://ratulhasanruhan.github.io/assets/projects/junior.png",
+    "link": "https://www.ekushey-tv.com/%E0%A6%96%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%B0-%E0%A6%9B%E0%A6%B2%E0%A7%87-%E0%A6%85%E0%A6%A8%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%A8%E0%A7%87-%E0%A6%AC%E0%A6%BE%E0%A6%9A%E0%A7%8D%E0%A6%9A%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%B6%E0%A7%87%E0%A6%96%E0%A6%BE%E0%A6%9A%E0%A7%8D%E0%A6%9B%E0%A7%87-%E0%A6%9C%E0%A7%81%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A6%B0-%E0%A6%95%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AE%E0%A6%AC%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A7%9F%E0%A6%BE%E0%A6%A8/1360873111111142091"
   },
   {
-    "title": "Healthcare Management Platform",
-    "category": "Web Development", 
-    "description": "Comprehensive web platform for patient management, appointment scheduling, and telemedicine integration.",
-    "technologies": ["React", "Python", "PostgreSQL", "AWS"]
+    "title": "Sydrix AI",
+    "category": "EdTech",
+    "description": "Smart Study Management AI platform that personalizes learning experiences through intelligent content recommendations, study schedule optimization, and performance analytics for enhanced academic success.",
+    "technologies": ["Python", "TensorFlow", "React", "FastAPI", "PostgreSQL"],
+    "image": "https://ratulhasanruhan.github.io/assets/projects/sydrix_ai.png",
+    "link": "https://sydrixai.com/"
   },
   {
-    "title": "IoT Monitoring System",
-    "category": "Embedded Systems",
-    "description": "Real-time monitoring solution for industrial equipment with predictive maintenance capabilities.",
-    "technologies": ["C++", "Python", "InfluxDB", "Grafana"]
+    "title": "Hello Chatkhil",
+    "category": "Healthcare",
+    "description": "A comprehensive medical and blood donation application serving the Chatkhil community. Features emergency blood request system, health consultations, medical records management, and volunteer network.",
+    "technologies": ["Flutter", "Firebase", "Node.js", "Express", "MongoDB"],
+    "image": "https://ratulhasanruhan.github.io/assets/projects/hello_chatkhil.png",
+    "link": "https://play.google.com/store/apps/details?id=com.rhrsoft.rokto"
   },
   {
-    "title": "Financial Trading Platform",
-    "category": "Full-Stack Development",
-    "description": "High-performance trading platform with real-time data processing and advanced analytics.",
-    "technologies": ["Vue.js", "Java", "Redis", "WebSocket"]
+    "title": "ISTT University",
+    "category": "EdTech",
+    "description": "Institute of Science, Trade & Technology (ISTT) routine management system. Streamlines academic scheduling, class management, faculty coordination, and student notifications for enhanced educational administration.",
+    "technologies": ["React", "PHP", "MySQL", "Bootstrap", "Chart.js"],
+    "image": "https://ratulhasanruhan.github.io/assets/projects/istt.jpeg",
+    "link": "https://istt-uni.web.app/"
   },
   {
-    "title": "Educational Learning App",
-    "category": "Mobile Development",
-    "description": "Interactive learning platform with gamification, progress tracking, and offline capabilities.",
-    "technologies": ["Flutter", "Firebase", "Node.js", "MongoDB"]
+    "title": "Sikhboi",
+    "category": "EdTech",
+    "description": "A comprehensive application for digital learners featuring interactive courses, skill assessments, certification programs, and personalized learning paths. Designed to democratize quality education access.",
+    "technologies": ["Vue.js", "Laravel", "MySQL", "Redis", "Pusher"],
+    "image": "https://ratulhasanruhan.github.io/assets/projects/sikhboi.webp",
+    "link": "https://play.google.com/store/apps/details?id=com.rhrsoft.sikhboinew"
   },
   {
-    "title": "Enterprise Resource Planning",
-    "category": "Enterprise Solution",
-    "description": "Comprehensive ERP system integrating inventory, HR, finance, and customer management modules.",
-    "technologies": ["Angular", ".NET", "SQL Server", "Azure"]
+    "title": "Bandhu Ai",
+    "category": "AI/ML Solution",
+    "description": "A social networking platform designed to connect communities and foster meaningful relationships. Features include community groups, event management, local business directory, and social commerce.",
+    "technologies": ["React Native", "Express", "PostgreSQL", "Redis", "AWS"],
+    "image": "https://ratulhasanruhan.github.io/assets/projects/bandhu.png",
+    "link": "https://bandhuai.app/"
   }
 ]
-

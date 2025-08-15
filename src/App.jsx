@@ -385,7 +385,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-			Appibrium Originals
+              Appibrium Originals
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               We don't just build for others — we build for the world. Here are the tools and solutions born inside Appibrium.
@@ -440,41 +440,82 @@ function App() {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section id="portfolio" className="py-20 bg-gray-50 dark:bg-gray-800" itemScope itemType="https://schema.org/ItemList">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <header className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4" itemProp="name">
               Featured Projects
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Showcasing our expertise through successful client solutions
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto" itemProp="description">
+              Showcasing our expertise through successful client solutions and innovative projects
             </p>
-          </div>
+          </header>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectsData.map((project, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
-                <CardHeader>
-                  <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
-                    <Code className="w-16 h-16 text-primary/60" />
+              <article itemScope itemType="https://schema.org/SoftwareApplication" itemProp="itemListElement" className="hover:shadow-lg transition-shadow duration-300 overflow-hidden p-0 bg-white dark:bg-gray-800 rounded-lg">
+                <div className="relative">
+                  <div className="w-full h-56 bg-gradient-to-br from-primary/20 to-accent/20 overflow-hidden">
+                    {project.image ? (
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        itemProp="image"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <Code className="w-16 h-16 text-primary/60" />
+                      </div>
+                    )}
                   </div>
-                  <Badge variant="outline" className="w-fit mb-2">{project.category}</Badge>
-                  <CardTitle className="text-xl">{project.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base mb-4">
+                  <div className="absolute top-3 left-3">
+                    <Badge variant="secondary" className="bg-primary text-white border-0 font-medium" itemProp="applicationCategory">
+                      {project.category}
+                    </Badge>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2" itemProp="name">{project.title}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 line-clamp-2" itemProp="description">
                     {project.description}
-                  </CardDescription>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
+                  </p>
+                  <meta itemProp="url" content={project.link} />
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.technologies.slice(0, 3).map((tech, techIndex) => (
                       <Badge key={techIndex} variant="secondary" className="text-xs">
                         {tech}
                       </Badge>
                     ))}
+                    {project.technologies.length > 3 && (
+                      <Badge variant="secondary" className="text-xs">
+                        +{project.technologies.length - 3}
+                      </Badge>
+                    )}
                   </div>
-                </CardContent>
-              </Card>
+                  {project.link && project.link !== "#" && (
+                    <Button 
+                      onClick={() => window.open(project.link, '_blank')}
+                      className="w-full"
+                      variant="outline"
+                      size="sm"
+                    >
+                      View Project
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  )}
+                </div>
+              </article>
             ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <button 
+              onClick={() => window.location.href = '/works'}
+              className="text-primary hover:text-primary/80 transition-colors text-lg font-medium underline decoration-2 underline-offset-4"
+            >
+              View All Works →
+            </button>
           </div>
         </div>
       </section>
