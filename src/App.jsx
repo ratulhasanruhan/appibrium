@@ -1,5 +1,6 @@
 import projectsData from './lib/projects.json'
 import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { Button } from '@/components/ui/button.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
@@ -48,6 +49,8 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
 
+    const location = useLocation()
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['home', 'services', 'products', 'portfolio', 'about', 'process', 'technologies', 'testimonials', 'contact']
@@ -70,6 +73,19 @@ function App() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+    // Scroll to anchor on route change
+    useEffect(() => {
+      if (location.hash) {
+        const id = location.hash.replace('#', '')
+        setTimeout(() => {
+          const el = document.getElementById(id)
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' })
+          }
+        }, 100)
+      }
+    }, [location])
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode)
@@ -715,7 +731,7 @@ function App() {
                   <Facebook className="w-4 h-4" />
                 </Button>
                 <Button variant="outline" size="sm" onClick={() => window.open('https://play.google.com/store/apps/dev?id=6109039901707570348', '_blank')}>
-                  <span className="w-4 h-4 flex items-center justify-center text-sm font-bold">G</span>
+                  <Play className="w-4 h-4" />
                 </Button>
               </div>
             </div>
@@ -808,7 +824,7 @@ function App() {
                   <Facebook className="w-4 h-4" />
                 </Button>
                 <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white" onClick={() => window.open('https://play.google.com/store/apps/dev?id=6109039901707570348', '_blank')}>
-                  <span className="w-4 h-4 flex items-center justify-center text-sm font-bold">G</span>
+                  <Play className="w-4 h-4" />
                 </Button>
               </div>
             </div>

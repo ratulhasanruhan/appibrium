@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Button } from '@/components/ui/button.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
@@ -40,6 +41,8 @@ function Works() {
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [filteredProjects, setFilteredProjects] = useState(projectsData)
 
+    const navigate = useNavigate()
+
   useEffect(() => {
     // Check for dark mode preference
     if (document.documentElement.classList.contains('dark')) {
@@ -72,6 +75,10 @@ function Works() {
   const goToHome = () => {
     window.location.href = '/'
   }
+
+    const goToContact = () => {
+      navigate('/#contact')
+    }
 
   return (
     <div className={`min-h-screen bg-gray-50 dark:bg-gray-900 ${isDarkMode ? 'dark' : ''}`}>
@@ -246,7 +253,7 @@ function Works() {
             <Button size="lg" onClick={goToHome}>
               Get Started
             </Button>
-            <Button size="lg" variant="outline" onClick={() => window.location.href = '/#contact'}>
+            <Button size="lg" variant="outline" onClick={goToContact}>
               Contact Us
             </Button>
           </div>
