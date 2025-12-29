@@ -708,7 +708,7 @@ function App() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-primary" />
-                  <span className="text-gray-600 dark:text-gray-300">hello@appibrium.xyz</span>
+                  <a href="mailto:hello@appibrium.tech" className="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">hello@appibrium.tech</a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-primary" />
@@ -854,7 +854,7 @@ function App() {
             <div>
               <h3 className="font-semibold mb-4">Contact</h3>
               <ul className="space-y-2 text-gray-400">
-                <li>hello@appibrium.xyz</li>
+                <li><a href="mailto:hello@appibrium.tech" className="hover:text-white transition-colors">hello@appibrium.tech</a></li>
                 <li>+880 1789536985</li>
                 <li>57/5 Panthapath, Dhaka-1205, BD</li>
               </ul>
