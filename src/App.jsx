@@ -1,6 +1,6 @@
 import projectsData from './lib/projects.json'
 import { useState, useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
@@ -417,7 +417,7 @@ function App() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {products.map((product, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow duration-300 overflow-hidden p-0">
                 <div className="relative">
@@ -477,8 +477,14 @@ function App() {
           </header>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projectsData.map((project, index) => (
-              <article itemScope itemType="https://schema.org/SoftwareApplication" itemProp="itemListElement" className="hover:shadow-lg transition-shadow duration-300 overflow-hidden p-0 bg-white dark:bg-gray-800 rounded-lg">
+            {projectsData.map((project) => (
+              <article
+                key={project.title}
+                itemScope
+                itemType="https://schema.org/SoftwareApplication"
+                itemProp="itemListElement"
+                className="hover:shadow-lg transition-shadow duration-300 overflow-hidden p-0 bg-white dark:bg-gray-800 rounded-lg"
+              >
                 <div className="relative">
                   <div className="w-full h-56 bg-gradient-to-br from-primary/20 to-accent/20 overflow-hidden">
                     {project.image ? (
@@ -857,6 +863,7 @@ function App() {
                 <li><a href="https://careers.appibrium.tech" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Careers</a></li>
                 <li><a href="#contact" onClick={() => scrollToSection('contact')} className="hover:text-white transition-colors cursor-pointer">Contact</a></li>
                 <li><a href="/legal.html" target="_blank" className="hover:text-white transition-colors">Legal & Privacy</a></li>
+                <li><Link to="/media-kit" className="hover:text-white transition-colors">Media Kit</Link></li>
               </ul>
             </div>
             
