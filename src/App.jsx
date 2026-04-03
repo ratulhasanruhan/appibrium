@@ -189,6 +189,15 @@ function App() {
       image: "https://raw.githubusercontent.com/appibrium/company-profile/main/appibrium_originals/porichoy_white.png",
       link: "http://porichoy.me/",
       features: ["CV Builder", "Web Profile", "Dark/Light Mode", "Multi-language", "Control Panel"]
+    },
+    {
+      name: "Datayon",
+      description: "A Bengali tech magazine bringing news, stories, and practical insights for tech lovers across Bangladesh.",
+      category: "Tech Magazine",
+      technologies: ["Bengali", "Editorial", "Insights"],
+      image: "https://raw.githubusercontent.com/appibrium/company-profile/refs/heads/main/appibrium_originals/datayon.png",
+      link: "https://datayon.bd",
+      features: ["Tech News", "Editorial Stories", "Guides & Reviews", "Community Updates", "Bengali Content"]
     }
   ]
 
