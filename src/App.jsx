@@ -42,6 +42,7 @@ import {
 import logoText from './assets/txt_b.png'
 import logoWhite from './assets/twx_wh.png'
 import appibriumBanner from './assets/appibrium_banner.png'
+import miniFav from './assets/mini_fav.png'
 import './App.css'
 
 function App() {
@@ -50,6 +51,11 @@ function App() {
   const [activeSection, setActiveSection] = useState('home')
 
     const location = useLocation()
+
+  useEffect(() => {
+    document.title =
+      'Appibrium - Leading Software Development Company | Mobile Apps, Web Development, AI/ML & IoT Solutions'
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -342,8 +348,23 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-16 min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section id="home" className="relative pt-16 min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+        <div className="pointer-events-none absolute inset-0 z-0" aria-hidden>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_85%_55%_at_50%_-15%,oklch(0.65_0.15_162/0.14),transparent_55%)] dark:bg-[radial-gradient(ellipse_85%_55%_at_50%_-15%,oklch(0.65_0.15_162/0.12),transparent_55%)]" />
+          <div className="absolute inset-0 flex items-center justify-end pointer-events-none p-4 sm:p-8 lg:pr-12 xl:pr-20">
+            <img
+              src={miniFav}
+              alt=""
+              width={512}
+              height={512}
+              className="h-auto max-h-[min(58vh,30rem)] w-auto max-w-[min(52vw,18rem)] sm:max-w-[min(44vw,20rem)] object-contain opacity-[0.09] dark:opacity-[0.14] select-none"
+              role="presentation"
+              decoding="async"
+              fetchPriority="low"
+            />
+          </div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               Innovative Software Solutions
@@ -421,10 +442,12 @@ function App() {
             {products.map((product, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow duration-300 overflow-hidden p-0">
                 <div className="relative">
-                  <img 
-                    src={product.image} 
+                  <img
+                    src={product.image}
                     alt={product.name}
                     className="w-full h-48 object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute top-4 left-4">
                     <Badge variant="secondary" className="bg-white/90 text-gray-800">
@@ -488,11 +511,13 @@ function App() {
                 <div className="relative">
                   <div className="w-full h-56 bg-gradient-to-br from-primary/20 to-accent/20 overflow-hidden">
                     {project.image ? (
-                      <img 
-                        src={project.image} 
+                      <img
+                        src={project.image}
                         alt={project.title}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         itemProp="image"
+                        loading="lazy"
+                        decoding="async"
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center">
@@ -590,10 +615,12 @@ function App() {
               </div>
             </div>
             <div className="relative">
-              <img 
-                src={appibriumBanner} 
-                alt="Appibrium Team" 
+              <img
+                src={appibriumBanner}
+                alt="Appibrium Team"
                 className="w-full h-64 md:h-96 object-cover rounded-lg mb-4"
+                loading="lazy"
+                decoding="async"
               />
               <p className="text-lg text-gray-600 dark:text-gray-300 text-center">
                 Innovation Through Code
@@ -823,7 +850,7 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <img src={logoWhite} alt="Appibrium" className="h-14" />
+                <img src={logoWhite} alt="Appibrium" className="h-14" loading="lazy" decoding="async" />
               </div>
               <p className="text-gray-400 mb-4">
                 Innovative software solutions for every platform. Transform your business with cutting-edge technology.
@@ -878,7 +905,7 @@ function App() {
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 Appibrium. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Appibrium. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -7,6 +7,7 @@
     <link rel="manifest" href="/site.webmanifest" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
     
     <!-- Primary Meta Tags -->
     <title>Appibrium - Leading Software Development Company | Mobile Apps, Web Development, AI/ML & IoT Solutions</title>
@@ -30,6 +31,7 @@
     <meta property="og:title" content="Appibrium - Leading Software Development Company | Mobile Apps, Web Development, AI/ML & IoT Solutions" />
     <meta property="og:description" content="Appibrium is Bangladesh's premier software development company. We specialize in mobile apps (iOS/Android), web development, embedded systems, AI/ML, IoT solutions, and custom software. Our portfolio includes GoruSheba, DokanMate, Porichoy, Datayon, Junior Cambrian LMS, Sydrix AI, Hello Chatkhil healthcare app, and more innovative solutions." />
     <meta property="og:image" content="https://appibrium.tech/txt_b.png" />
+    <meta property="og:image:secure_url" content="https://appibrium.tech/txt_b.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Appibrium - Software Development Company" />
@@ -48,8 +50,9 @@
     <meta property="twitter:site" content="@appibrium" />
     
     <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#18CB96" />
-    <meta name="msapplication-TileColor" content="#18CB96" />
+    <meta name="theme-color" content="#1DD1A1" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
+    <meta name="msapplication-TileColor" content="#1DD1A1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Appibrium" />
@@ -62,9 +65,9 @@
     <link rel="alternate" hreflang="bn" href="https://appibrium.tech/" />
     <link rel="alternate" hreflang="x-default" href="https://appibrium.tech/" />
     
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preconnect: analytics (no Google Fonts — site uses system UI stack) -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4V2PKQKQLT"></script>
@@ -403,12 +406,7 @@
     }
     </script>
 
-    <!-- Bengali SEO Meta Tags -->
-    <meta name="title" content="এপিব্রিয়াম - সফটওয়্যার কোম্পানি | মোবাইল অ্যাপ, ওয়েব ডেভেলপমেন্ট, এমবেডেড সিস্টেমস" lang="bn" />
-    <meta name="description" content="এপিব্রিয়াম বাংলাদেশের একটি শীর্ষ সফটওয়্যার কোম্পানি। মোবাইল অ্যাপ, ওয়েব ডেভেলপমেন্ট, এমবেডেড সিস্টেমস এবং কাস্টম সফটওয়্যার সলিউশনস। এর পোর্টফোলিওতে আছে Datayon—বাংলা টেক ম্যাগাজিন।" lang="bn" />
-    <meta name="keywords" content="এপিব্রিয়াম, সফটওয়্যার কোম্পানি, মোবাইল অ্যাপ ডেভেলপমেন্ট, ওয়েব ডেভেলপমেন্ট, এমবেডেড সিস্টেম, বাংলাদেশ, ঢাকা, Appibrium, software company, bangla software, custom software, AI, IoT, Datayon, বাংলা টেক ম্যাগাজিন, টেক নিউজ বাংলাদেশ" lang="bn" />
-    <meta name="language" content="Bengali" />
-    <!-- End Bengali SEO Meta Tags -->
+    <!-- Bengali tagline injected below (hreflang bn handled above; avoid duplicate title/description meta) -->
 
     <!-- Bengali Tagline in Hero Section (add after main English headline) -->
     <script>
@@ -418,7 +416,7 @@
           var bnTag = document.createElement('div');
           bnTag.textContent = 'এপিব্রিয়াম - আপনার আস্থার সফটওয়্যার কোম্পানি';
           bnTag.style.fontSize = '1.25rem';
-          bnTag.style.color = '#18CB96';
+          bnTag.style.color = '#1DD1A1';
           bnTag.style.marginTop = '0.5rem';
           bnTag.style.fontWeight = 'bold';
           hero.parentNode.insertBefore(bnTag, hero.nextSibling);

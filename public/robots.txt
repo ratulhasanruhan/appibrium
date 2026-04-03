@@ -3,6 +3,3 @@ Allow: /
 
 # Sitemap
 Sitemap: https://appibrium.tech/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 1 

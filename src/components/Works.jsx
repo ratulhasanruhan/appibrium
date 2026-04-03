@@ -44,6 +44,10 @@ function Works() {
     const navigate = useNavigate()
 
   useEffect(() => {
+    document.title = 'Our Works & Portfolio | Appibrium'
+  }, [])
+
+  useEffect(() => {
     // Check for dark mode preference
     if (document.documentElement.classList.contains('dark')) {
       setIsDarkMode(true)
@@ -181,10 +185,12 @@ function Works() {
                     {/* Project Image */}
                     <div className="w-full h-56 bg-gradient-to-br from-primary/20 to-accent/20 overflow-hidden">
                       {project.image ? (
-                        <img 
-                          src={project.image} 
+                        <img
+                          src={project.image}
                           alt={project.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                          decoding="async"
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center">
@@ -263,9 +269,9 @@ function Works() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <img src={logoWhite} alt="Appibrium" className="h-12 mx-auto mb-4" />
+          <img src={logoWhite} alt="Appibrium" className="h-12 mx-auto mb-4" loading="lazy" decoding="async" />
           <p className="text-gray-400">
-            &copy; 2025 Appibrium. All rights reserved.
+            &copy; {new Date().getFullYear()} Appibrium. All rights reserved.
           </p>
         </div>
       </footer>

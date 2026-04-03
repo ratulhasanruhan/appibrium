@@ -1,11 +1,13 @@
-import { StrictMode } from 'react'
+import { StrictMode, lazy, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './index.css'
 import faviconUrl from './assets/mini_fav.png'
 import App from './App.jsx'
-import Works from './components/Works.jsx'
-import MediaKit from './components/MediaKit.jsx'
+import { RouteFallback } from './components/RouteFallback.jsx'
+
+const Works = lazy(() => import('./components/Works.jsx'))
+const MediaKit = lazy(() => import('./components/MediaKit.jsx'))
 
 {
   const ensureLink = (rel) => {
@@ -25,11 +27,13 @@ import MediaKit from './components/MediaKit.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/works" element={<Works />} />
-        <Route path="/media-kit" element={<MediaKit />} />
-      </Routes>
+      <Suspense fallback={<RouteFallback />}>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/works" element={<Works />} />
+          <Route path="/media-kit" element={<MediaKit />} />
+        </Routes>
+      </Suspense>
     </Router>
   </StrictMode>,
 )

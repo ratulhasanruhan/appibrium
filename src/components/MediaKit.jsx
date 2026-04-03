@@ -45,6 +45,10 @@ function MediaKit() {
   const navigate = useNavigate()
 
   useEffect(() => {
+    document.title = 'Media Kit — Logos & Brand | Appibrium'
+  }, [])
+
+  useEffect(() => {
     if (document.documentElement.classList.contains('dark')) {
       setIsDarkMode(true)
     }
