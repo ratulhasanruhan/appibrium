@@ -758,7 +758,7 @@ function App() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-primary" />
-                  <span className="text-gray-600 dark:text-gray-300">57/5 Panthapath, Dhaka-1205, BD</span>
+                  <span className="text-gray-600 dark:text-gray-300">23/A Shukrabad, Dhaka - 1207, Bangladesh</span>
                 </div>
               </div>
               
@@ -899,7 +899,7 @@ function App() {
               <ul className="space-y-2 text-gray-400">
                 <li><a href="mailto:hello@appibrium.tech" className="hover:text-white transition-colors">hello@appibrium.tech</a></li>
                 <li>+880 1789536985</li>
-                <li>57/5 Panthapath, Dhaka-1205, BD</li>
+                <li>23/A Shukrabad, Dhaka - 1207, Bangladesh</li>
               </ul>
             </div>
           </div>
