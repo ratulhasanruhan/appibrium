@@ -110,6 +110,20 @@
     <priority>0.7</priority>
   </url>
   
+  <url>
+    <loc>https://richminis.com/</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://ilmpurity.com/</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
   <!-- Social Media -->
   <url>
     <loc>https://github.com/appibrium</loc>

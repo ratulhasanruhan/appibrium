@@ -46,5 +46,21 @@
     "technologies": ["React Native", "Express", "PostgreSQL", "Redis", "AWS"],
     "image": "https://ratulhasanruhan.github.io/assets/projects/bandhu.png",
     "link": "https://bandhuai.app/"
+  },
+  {
+    "title": "Richminis",
+    "category": "E-commerce",
+    "description": "A modern, high-performance e-commerce platform designed for speed, scalability, and seamless user shopping experiences.",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "Stripe", "Node.js", "PostgreSQL"],
+    "image": "https://ratulhasanruhan.github.io/assets/projects/richminis.webp",
+    "link": "https://richminis.com"
+  },
+  {
+    "title": "Ilmpurity",
+    "category": "EdTech",
+    "description": "A Learning Management System (LMS) featuring an AI-based exam system that utilizes Retrieval-Augmented Generation (RAG) and Computer Vision for automated answer checking.",
+    "technologies": ["React", "Node.js", "RAG", "Computer Vision", "Python", "MongoDB"],
+    "image": "https://ratulhasanruhan.github.io/assets/projects/ilmpurity.webp",
+    "link": "https://ilmpurity.com"
   }
 ]
