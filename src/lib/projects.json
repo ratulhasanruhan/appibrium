@@ -3,7 +3,13 @@
     "title": "Junior Cambrian",
     "category": "EdTech",
     "description": "An innovative Learning Management System (LMS) with gamification features designed to enhance student engagement. Includes interactive lessons, progress tracking, achievement badges, and collaborative learning tools.",
-    "technologies": ["React", "Node.js", "MongoDB", "Socket.io", "JWT"],
+    "technologies": [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Socket.io",
+      "JWT"
+    ],
     "image": "https://ratulhasanruhan.github.io/assets/projects/junior.png",
     "link": "https://www.ekushey-tv.com/%E0%A6%96%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%B0-%E0%A6%9B%E0%A6%B2%E0%A7%87-%E0%A6%85%E0%A6%A8%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%A8%E0%A7%87-%E0%A6%AC%E0%A6%BE%E0%A6%9A%E0%A7%8D%E0%A6%9A%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%B6%E0%A7%87%E0%A6%96%E0%A6%BE%E0%A6%9A%E0%A7%8D%E0%A6%9B%E0%A7%87-%E0%A6%9C%E0%A7%81%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A6%B0-%E0%A6%95%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AE%E0%A6%AC%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A7%9F%E0%A6%BE%E0%A6%A8/1360873111111142091"
   },
@@ -11,7 +17,13 @@
     "title": "Sydrix AI",
     "category": "EdTech",
     "description": "Smart Study Management AI platform that personalizes learning experiences through intelligent content recommendations, study schedule optimization, and performance analytics for enhanced academic success.",
-    "technologies": ["Python", "TensorFlow", "React", "FastAPI", "PostgreSQL"],
+    "technologies": [
+      "Python",
+      "TensorFlow",
+      "React",
+      "FastAPI",
+      "PostgreSQL"
+    ],
     "image": "https://ratulhasanruhan.github.io/assets/projects/sydrix_ai.png",
     "link": "https://sydrixai.com/"
   },
@@ -19,7 +31,13 @@
     "title": "Hello Chatkhil",
     "category": "Healthcare",
     "description": "A comprehensive medical and blood donation application serving the Chatkhil community. Features emergency blood request system, health consultations, medical records management, and volunteer network.",
-    "technologies": ["Flutter", "Firebase", "Node.js", "Express", "MongoDB"],
+    "technologies": [
+      "Flutter",
+      "Firebase",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
     "image": "https://ratulhasanruhan.github.io/assets/projects/hello_chatkhil.png",
     "link": "https://play.google.com/store/apps/details?id=com.rhrsoft.rokto"
   },
@@ -27,7 +45,13 @@
     "title": "ISTT University",
     "category": "EdTech",
     "description": "Institute of Science, Trade & Technology (ISTT) routine management system. Streamlines academic scheduling, class management, faculty coordination, and student notifications for enhanced educational administration.",
-    "technologies": ["React", "PHP", "MySQL", "Bootstrap", "Chart.js"],
+    "technologies": [
+      "React",
+      "PHP",
+      "MySQL",
+      "Bootstrap",
+      "Chart.js"
+    ],
     "image": "https://ratulhasanruhan.github.io/assets/projects/istt.jpeg",
     "link": "https://istt-uni.web.app/"
   },
@@ -35,7 +59,13 @@
     "title": "Sikhboi",
     "category": "EdTech",
     "description": "A comprehensive application for digital learners featuring interactive courses, skill assessments, certification programs, and personalized learning paths. Designed to democratize quality education access.",
-    "technologies": ["Vue.js", "Laravel", "MySQL", "Redis", "Pusher"],
+    "technologies": [
+      "Vue.js",
+      "Laravel",
+      "MySQL",
+      "Redis",
+      "Pusher"
+    ],
     "image": "https://ratulhasanruhan.github.io/assets/projects/sikhboi.webp",
     "link": "https://play.google.com/store/apps/details?id=com.rhrsoft.sikhboinew"
   },
@@ -43,7 +73,13 @@
     "title": "Bandhu Ai",
     "category": "AI/ML Solution",
     "description": "A social networking platform designed to connect communities and foster meaningful relationships. Features include community groups, event management, local business directory, and social commerce.",
-    "technologies": ["React Native", "Express", "PostgreSQL", "Redis", "AWS"],
+    "technologies": [
+      "React Native",
+      "Express",
+      "PostgreSQL",
+      "Redis",
+      "AWS"
+    ],
     "image": "https://ratulhasanruhan.github.io/assets/projects/bandhu.png",
     "link": "https://bandhuai.app/"
   },
@@ -51,7 +87,14 @@
     "title": "Richminis",
     "category": "E-commerce",
     "description": "A modern, high-performance e-commerce platform designed for speed, scalability, and seamless user shopping experiences.",
-    "technologies": ["Next.js", "React", "Tailwind CSS", "Stripe", "Node.js", "PostgreSQL"],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Stripe",
+      "Node.js",
+      "PostgreSQL"
+    ],
     "image": "https://ratulhasanruhan.github.io/assets/projects/richminis.webp",
     "link": "https://richminis.com"
   },
@@ -59,8 +102,29 @@
     "title": "Ilmpurity",
     "category": "EdTech",
     "description": "A Learning Management System (LMS) featuring an AI-based exam system that utilizes Retrieval-Augmented Generation (RAG) and Computer Vision for automated answer checking.",
-    "technologies": ["React", "Node.js", "RAG", "Computer Vision", "Python", "MongoDB"],
+    "technologies": [
+      "React",
+      "Node.js",
+      "RAG",
+      "Computer Vision",
+      "Python",
+      "MongoDB"
+    ],
     "image": "https://ratulhasanruhan.github.io/assets/projects/ilmpurity.webp",
     "link": "https://ilmpurity.com"
+  },
+  {
+    "title": "Care Life Touch",
+    "category": "Healthcare",
+    "description": "A comprehensive healthcare and medicine service platform featuring real-time prescription parsing, pharmacy inventory syncing, and automated courier routing for express medicine deliveries.",
+    "technologies": [
+      "Flutter",
+      "Django",
+      "PostgreSQL",
+      "Redis",
+      "OCR"
+    ],
+    "image": "https://ratulhasanruhan.github.io/assets/projects/care_life_touch.webp",
+    "link": "https://play.google.com/store/apps/details?id=com.appibrium.care_life_touch"
   }
 ]
