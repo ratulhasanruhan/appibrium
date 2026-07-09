@@ -111,8 +111,8 @@ function MediaKit() {
           </p>
           <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-sm">
             Questions? Email{' '}
-            <a href="mailto:hello@appibrium.tech" className="text-primary hover:underline">
-              hello@appibrium.tech
+            <a href="mailto:hello@appibrium.com" className="text-primary hover:underline">
+              hello@appibrium.com
             </a>
             {' '}with “Media” in the subject line.
           </p>
@@ -270,8 +270,8 @@ function MediaKit() {
             </CardHeader>
             <CardContent className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button asChild>
-                <a href="mailto:hello@appibrium.tech?subject=Media%20inquiry">
-                  hello@appibrium.tech
+                <a href="mailto:hello@appibrium.com?subject=Media%20inquiry">
+                  hello@appibrium.com
                 </a>
               </Button>
               <Button variant="outline" onClick={goToContact}>

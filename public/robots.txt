@@ -1,5 +1,53 @@
+# =========================================
+# Appibrium — robots.txt
+# Domain: appibrium.com
+# =========================================
+
+# Allow all search engines
 User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /*.json$
+
+# AI Crawlers — explicitly permitted
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
 Allow: /
 
 # Sitemap
-Sitemap: https://appibrium.tech/sitemap.xml
+Sitemap: https://appibrium.com/sitemap.xml
+
+# AI Content Declaration
+# See https://appibrium.com/llms.txt for AI-readable content

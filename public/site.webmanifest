@@ -1,7 +1,7 @@
 {
-  "name": "Appibrium - Custom Software Development Company",
+  "name": "Appibrium — Engineering the Future",
   "short_name": "Appibrium",
-  "description": "Leading software development company specializing in mobile applications, web development, embedded systems, and custom software solutions.",
+  "description": "Appibrium is an engineering company that designs, builds, and scales intelligent technologies across AI, software, cloud infrastructure, embedded systems, and IoT.",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -11,11 +11,30 @@
     {
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
-  "theme_color": "#18CB96",
-  "background_color": "#ffffff",
+  "theme_color": "#0A1A10",
+  "background_color": "#0A1A10",
   "display": "standalone",
-  "start_url": "/"
-} 
+  "start_url": "/",
+  "scope": "/",
+  "lang": "en",
+  "orientation": "portrait-primary",
+  "categories": ["technology", "business"],
+  "shortcuts": [
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Start a project with Appibrium",
+      "url": "/#contact"
+    },
+    {
+      "name": "Our Works",
+      "short_name": "Works",
+      "description": "View all Appibrium projects",
+      "url": "/works"
+    }
+  ]
+}

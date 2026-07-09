@@ -1,0 +1,12 @@
+{
+  "name": "appibrium-logo-generator",
+  "version": "1.0.0",
+  "description": "Code-based SVG and PNG brand asset exporter for Appibrium",
+  "main": "exporter.js",
+  "scripts": {
+    "generate": "node exporter.js"
+  },
+  "dependencies": {
+    "puppeteer-core": "^24.43.1"
+  }
+}

@@ -1,495 +1,291 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
-    
-    <!-- Tab / PWA icons: `src/assets/mini_fav.png` (applied in main.jsx) -->
-    <link rel="manifest" href="/site.webmanifest" />
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light dark" />
-    
-    <!-- Primary Meta Tags -->
-    <title>Appibrium - Leading Software Development Company | Mobile Apps, Web Development, AI/ML & IoT Solutions</title>
-    <meta name="title" content="Appibrium - Leading Software Development Company | Mobile Apps, Web Development, AI/ML & IoT Solutions" />
-    <meta name="description" content="Appibrium is Bangladesh's premier software development company. We specialize in mobile apps (iOS/Android), web development, embedded systems, AI/ML, IoT solutions, and custom software. Our portfolio includes GoruSheba, DokanMate, Porichoy, Datayon, Junior Cambrian LMS, Sydrix AI, Hello Chatkhil healthcare app, ISTT University system, Sikhboi learning platform, Bandhu AI, Richminis modern e-commerce, Ilmpurity LMS with AI exams, and Care Life Touch medicine delivery. Transform your business with innovative technology." />
-    <meta name="keywords" content="Appibrium, software development company, mobile app development, web development, embedded systems, AI/ML, IoT solutions, React, Node.js, Python, Flutter, React Native, AWS, Docker, Kubernetes, Bangladesh software company, Dhaka software development, GoruSheba, DokanMate, Porichoy, Datayon, Bengali tech magazine, tech news Bangladesh, Junior Cambrian, Sydrix AI, Hello Chatkhil, ISTT University, Sikhboi, Bandhu AI, Richminis, Ilmpurity, Care Life Touch, LMS development, educational technology, healthcare apps, digital learning platform, medicine delivery app, custom software solutions, full-stack development, enterprise software, startup software, digital transformation, e-commerce development, RAG, computer vision exam checking" />
-    <meta name="author" content="Appibrium" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="color-scheme" content="light" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- ================================================
+         PRIMARY SEO
+    ================================================ -->
+    <title>Appibrium | Engineering the Future — AI, Software &amp; Cloud Engineering</title>
+    <meta name="title" content="Appibrium | Engineering the Future — AI, Software &amp; Cloud Engineering" />
+    <meta name="description" content="Appibrium is an engineering company that designs, builds, and scales intelligent technologies across AI engineering, software development, cloud infrastructure, embedded systems, and IoT. Based in Dhaka, Bangladesh — building globally. Products: GoruSheba, DokanMate, Porichoy, Datayon." />
+    <meta name="keywords" content="Appibrium, AI engineering, software engineering, cloud infrastructure, embedded systems, IoT, product engineering, research innovation, technology company, Bangladesh, Dhaka, flutter, react, nodejs, GoruSheba, DokanMate, Porichoy, Datayon, mobile app development, web development" />
+    <meta name="author" content="Appibrium Technology Co." />
+    <meta name="copyright" content="Appibrium Technology Co." />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="language" content="English" />
     <meta name="revisit-after" content="7 days" />
     <meta name="distribution" content="global" />
-    <meta name="rating" content="general" />
     <meta name="coverage" content="Worldwide" />
-    <meta name="target" content="all" />
     <meta name="HandheldFriendly" content="true" />
     <meta name="format-detection" content="telephone=no" />
-    
-    <!-- Open Graph / Facebook -->
+
+    <!-- ================================================
+         CANONICAL & ALTERNATE
+    ================================================ -->
+    <link rel="canonical" href="https://appibrium.com/" />
+    <link rel="alternate" hreflang="en" href="https://appibrium.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://appibrium.com/" />
+
+    <!-- ================================================
+         OPEN GRAPH — FACEBOOK / META
+    ================================================ -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://appibrium.tech/" />
-    <meta property="og:title" content="Appibrium - Leading Software Development Company | Mobile Apps, Web Development, AI/ML & IoT Solutions" />
-    <meta property="og:description" content="Appibrium is Bangladesh's premier software development company. We specialize in mobile apps (iOS/Android), web development, embedded systems, AI/ML, IoT solutions, and custom software. Our portfolio includes GoruSheba, DokanMate, Porichoy, Datayon, Junior Cambrian, Sydrix AI, Hello Chatkhil, ISTT University, Sikhboi, Bandhu AI, Richminis, Ilmpurity, and Care Life Touch." />
-    <meta property="og:image" content="https://appibrium.tech/txt_b.png" />
-    <meta property="og:image:secure_url" content="https://appibrium.tech/txt_b.png" />
+    <meta property="og:url" content="https://appibrium.com/" />
+    <meta property="og:site_name" content="Appibrium" />
+    <meta property="og:title" content="Appibrium | Engineering the Future" />
+    <meta property="og:description" content="Appibrium designs, builds, and scales intelligent technologies across AI, software engineering, cloud infrastructure, embedded systems, and IoT. Your future-ready technology partner." />
+    <meta property="og:image" content="https://appibrium.com/og_cover.png" />
+    <meta property="og:image:secure_url" content="https://appibrium.com/og_cover.png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Appibrium - Software Development Company" />
-    <meta property="og:site_name" content="Appibrium" />
+    <meta property="og:image:alt" content="Appibrium — Engineering the Future" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:locale:alternate" content="bn_BD" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://appibrium.tech/" />
-    <meta property="twitter:title" content="Appibrium - Leading Software Development Company" />
-    <meta property="twitter:description" content="Bangladesh's premier software development company specializing in mobile apps, web development, AI/ML, IoT solutions, and custom software. Products: GoruSheba, DokanMate, Porichoy, Datayon." />
-    <meta property="twitter:image" content="https://appibrium.tech/txt_b.png" />
-    <meta property="twitter:image:alt" content="Appibrium - Software Development Company" />
-    <meta property="twitter:creator" content="@appibrium" />
-    <meta property="twitter:site" content="@appibrium" />
-    
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#1DD1A1" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
-    <meta name="msapplication-TileColor" content="#1DD1A1" />
+
+    <!-- ================================================
+         TWITTER / X CARD
+    ================================================ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@appibrium" />
+    <meta name="twitter:creator" content="@appibrium" />
+    <meta name="twitter:title" content="Appibrium | Engineering the Future" />
+    <meta name="twitter:description" content="Appibrium designs, builds, and scales intelligent technologies across AI, software, cloud, embedded systems, and IoT." />
+    <meta name="twitter:image" content="https://appibrium.com/og_cover.png" />
+    <meta name="twitter:image:alt" content="Appibrium — Engineering the Future" />
+    <meta name="twitter:url" content="https://appibrium.com/" />
+
+    <!-- ================================================
+         AI CRAWLERS — GEO / AEO
+    ================================================ -->
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow" />
+    <meta name="GPTBot" content="index, follow" />
+    <meta name="ChatGPT-User" content="index, follow" />
+    <meta name="ClaudeBot" content="index, follow" />
+    <meta name="Claude-Web" content="index, follow" />
+    <meta name="anthropic-ai" content="index, follow" />
+    <meta name="PerplexityBot" content="index, follow" />
+    <meta name="Applebot" content="index, follow" />
+    <meta name="Amazonbot" content="index, follow" />
+    <meta name="cohere-ai" content="index, follow" />
+    <meta name="Google-Extended" content="index, follow" />
+    <link rel="ai-content-declaration" href="https://appibrium.com/llms.txt" />
+
+    <!-- ================================================
+         THEME & PWA
+    ================================================ -->
+    <meta name="theme-color" content="#FAF8F5" />
+    <meta name="msapplication-TileColor" content="#FAF8F5" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Appibrium" />
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://appibrium.tech/" />
-    
-    <!-- Alternate Language Versions -->
-    <link rel="alternate" hreflang="en" href="https://appibrium.tech/" />
-    <link rel="alternate" hreflang="bn" href="https://appibrium.tech/" />
-    <link rel="alternate" hreflang="x-default" href="https://appibrium.tech/" />
-    
-    <!-- Preconnect: analytics (no Google Fonts — site uses system UI stack) -->
+
+    <!-- ================================================
+         FAVICONS
+    ================================================ -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- ================================================
+         GOOGLE FONTS
+    ================================================ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Jost:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Preconnect analytics -->
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-    
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4V2PKQKQLT"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-4V2PKQKQLT');
     </script>
-    
-    <!-- Structured Data -->
+
+    <!-- ================================================
+         STRUCTURED DATA — ORGANIZATION (JSON-LD)
+    ================================================ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Appibrium",
-      "alternateName": "এপিব্রিয়াম",
-      "url": "https://appibrium.tech",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://appibrium.tech/txt_b.png",
-        "width": 300,
-        "height": 100
-      },
-      "description": "Bangladesh's premier software development company specializing in mobile applications, web development, embedded systems, AI/ML, IoT solutions, and custom software. Our products include GoruSheba, DokanMate, Porichoy, and Datayon.",
-      "foundingDate": "2020",
-      "numberOfEmployees": "10-50",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "23/A Shukrabad",
-        "addressLocality": "Dhaka",
-        "postalCode": "1207",
-        "addressCountry": "Bangladesh"
-      },
-      "contactPoint": [
+      "@graph": [
         {
-          "@type": "ContactPoint",
+          "@type": "Organization",
+          "@id": "https://appibrium.com/#organization",
+          "name": "Appibrium Technology Co.",
+          "alternateName": ["Appibrium", "Appibrium Tech", "এপিব্রিয়াম"],
+          "url": "https://appibrium.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://appibrium.com/android-chrome-512x512.png",
+            "width": 512,
+            "height": 512
+          },
+          "image": "https://appibrium.com/og_cover.png",
+          "description": "Appibrium is an engineering company that designs, builds, and scales intelligent technologies across software, AI, cloud infrastructure, embedded systems, and IoT. We partner with startups, businesses, and organizations to create reliable, future-ready solutions that solve real-world problems.",
+          "foundingDate": "2021",
+          "slogan": "Engineering the Future",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "23/A Shukrabad",
+            "addressLocality": "Dhaka",
+            "addressRegion": "Dhaka",
+            "postalCode": "1207",
+            "addressCountry": "BD"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "23.7399",
+            "longitude": "90.3827"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+880-1789536985",
+            "email": "hello@appibrium.com",
+            "contactType": "customer service",
+            "availableLanguage": ["English", "Bengali"]
+          },
+          "sameAs": [
+            "https://www.facebook.com/appibrium",
+            "https://www.linkedin.com/company/appibrium/",
+            "https://www.youtube.com/@appibrium",
+            "https://github.com/appibrium",
+            "https://appibrium.github.io/",
+            "https://play.google.com/store/apps/dev?id=6109039901707570348"
+          ],
+          "knowsAbout": [
+            "Artificial Intelligence Engineering",
+            "Software Engineering",
+            "Cloud Infrastructure",
+            "Embedded Systems",
+            "Internet of Things",
+            "Product Engineering",
+            "Research and Innovation",
+            "Mobile App Development",
+            "Web Development"
+          ],
+          "hasProduct": [
+            {
+              "@type": "SoftwareApplication",
+              "name": "GoruSheba",
+              "description": "Bangladesh's first intelligent cattle management system powered by AI & IoT",
+              "applicationCategory": "BusinessApplication",
+              "operatingSystem": "Android, iOS",
+              "url": "https://goru.help/"
+            },
+            {
+              "@type": "SoftwareApplication",
+              "name": "DokanMate",
+              "description": "Simple POS and retail management system for small businesses",
+              "applicationCategory": "BusinessApplication",
+              "operatingSystem": "Android, iOS",
+              "url": "https://www.facebook.com/dokanmate"
+            },
+            {
+              "@type": "SoftwareApplication",
+              "name": "Porichoy",
+              "description": "Easy CV and web profile maker for personal branding",
+              "applicationCategory": "ProductivityApplication",
+              "operatingSystem": "Web",
+              "url": "http://porichoy.me/"
+            },
+            {
+              "@type": "SoftwareApplication",
+              "name": "Datayon",
+              "description": "A Bengali tech magazine bringing news, stories, and practical insights for tech lovers across Bangladesh",
+              "applicationCategory": "MediaApplication",
+              "operatingSystem": "Web",
+              "url": "https://datayon.bd"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://appibrium.com/#website",
+          "url": "https://appibrium.com/",
+          "name": "Appibrium",
+          "description": "Engineering the Future — AI, Software & Cloud Engineering Company",
+          "publisher": { "@id": "https://appibrium.com/#organization" },
+          "inLanguage": "en-US",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": { "@type": "EntryPoint", "urlTemplate": "https://appibrium.com/?q={search_term_string}" },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://appibrium.com/#localbusiness",
+          "name": "Appibrium Technology Co.",
+          "image": "https://appibrium.com/og_cover.png",
+          "description": "Engineering company in Dhaka, Bangladesh specialising in AI, software, cloud, embedded systems and IoT.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "23/A Shukrabad",
+            "addressLocality": "Dhaka",
+            "postalCode": "1207",
+            "addressCountry": "BD"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 23.7399,
+            "longitude": 90.3827
+          },
+          "url": "https://appibrium.com",
           "telephone": "+880-1789536985",
-          "contactType": "customer service",
-          "email": "hello@appibrium.tech",
-          "availableLanguage": ["English", "Bengali"]
+          "email": "hello@appibrium.com",
+          "openingHours": "Mo-Fr 09:00-18:00",
+          "priceRange": "$$"
         },
         {
-          "@type": "ContactPoint",
-          "telephone": "+880-1789536985",
-          "contactType": "technical support",
-          "email": "hello@appibrium.tech"
-        }
-      ],
-      "sameAs": [
-        "https://github.com/appibrium",
-        "https://www.linkedin.com/company/appibrium",
-        "https://www.facebook.com/appibrium",
-        "https://careers.appibrium.tech",
-        "https://play.google.com/store/apps/dev?id=6109039901707570348"
-      ],
-      "serviceArea": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": 23.8103,
-          "longitude": 90.4125
-        },
-        "geoRadius": "50000"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Software Development Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Mobile App Development",
-              "description": "Native iOS & Android applications and cross-platform solutions using React Native and Flutter"
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is Appibrium?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Appibrium (Appibrium Technology Co.) is an engineering company founded in 2021 that designs, builds, and scales intelligent technologies across software, AI, cloud infrastructure, embedded systems, and IoT. We partner with startups, businesses, and organizations worldwide to create reliable, future-ready solutions." }
+            },
+            {
+              "@type": "Question",
+              "name": "What services does Appibrium offer?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Appibrium offers seven core engineering services: AI Engineering, Software Engineering, Cloud Infrastructure, Embedded Systems, Internet of Things (IoT), Product Engineering, and Research & Innovation." }
+            },
+            {
+              "@type": "Question",
+              "name": "Where is Appibrium located?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Appibrium is headquartered at 23/A Shukrabad, Dhaka, Bangladesh 1207. We serve clients globally." }
+            },
+            {
+              "@type": "Question",
+              "name": "How can I contact Appibrium?",
+              "acceptedAnswer": { "@type": "Answer", "text": "You can contact Appibrium by email at hello@appibrium.com, through the contact form at https://appibrium.com, or via LinkedIn at https://www.linkedin.com/company/appibrium/." }
+            },
+            {
+              "@type": "Question",
+              "name": "What products has Appibrium built?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Appibrium has built several original products: GoruSheba (AI & IoT cattle management), DokanMate (retail management POS), Datayon (Bengali tech magazine), and Porichoy (CV and personal branding platform)." }
+            },
+            {
+              "@type": "Question",
+              "name": "When was Appibrium founded?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Appibrium Technology Co. was founded in 2021 in Dhaka, Bangladesh." }
             }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Web Development",
-              "description": "Modern web applications with responsive design, from simple websites to complex enterprise platforms"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Embedded Systems",
-              "description": "IoT solutions, real-time systems, and software for specialized hardware applications"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "AI/ML Services",
-              "description": "Leverage artificial intelligence and machine learning for data analysis, predictive modeling, and automation"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Software Consulting",
-              "description": "Technical architecture, code reviews, and strategic technology planning"
-            }
-          }
-        ]
-      },
-      "hasProduct": [
-        {
-          "@type": "SoftwareApplication",
-          "name": "GoruSheba",
-          "description": "Bangladesh's first intelligent cattle management system powered by AI & IoT",
-          "applicationCategory": "BusinessApplication",
-          "operatingSystem": "Android, iOS",
-          "url": "https://goru.help/",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
-          }
-        },
-        {
-          "@type": "SoftwareApplication",
-          "name": "DokanMate",
-          "description": "Simple POS system for small businesses with inventory management",
-          "applicationCategory": "BusinessApplication",
-          "operatingSystem": "Android, iOS",
-          "url": "https://www.facebook.com/dokanmate",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
-          }
-        },
-        {
-          "@type": "SoftwareApplication",
-          "name": "Porichoy",
-          "description": "Easy CV and web maker for personal branding",
-          "applicationCategory": "ProductivityApplication",
-          "operatingSystem": "Web",
-          "url": "http://porichoy.me/",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
-          }
-        },
-        {
-          "@type": "SoftwareApplication",
-          "name": "Datayon",
-          "description": "A Bengali tech magazine featuring tech news, stories, and practical technology guides for Bangladesh.",
-          "applicationCategory": "MediaApplication",
-          "operatingSystem": "Web",
-          "url": "https://datayon.bd",
-          "image": "https://raw.githubusercontent.com/appibrium/company-profile/refs/heads/main/appibrium_originals/datayon.png"
-        },
-        {
-          "@type": "SoftwareApplication",
-          "name": "Junior Cambrian",
-          "description": "Learning Management System with gamification features for enhanced student engagement",
-          "applicationCategory": "EducationalApplication",
-          "operatingSystem": "Web",
-          "url": "https://www.ekushey-tv.com/খেলার-ছলে-অনলাইনে-বাচ্চাদের-শেখাচ্ছে-জুনিয়র-ক্যাম্ব্রিয়ান/1360873111111142091"
-        },
-        {
-          "@type": "SoftwareApplication", 
-          "name": "Sydrix AI",
-          "description": "Smart Study Management AI platform with personalized learning experiences",
-          "applicationCategory": "EducationalApplication",
-          "operatingSystem": "Web",
-          "url": "https://sydrixai.com/"
-        },
-        {
-          "@type": "SoftwareApplication",
-          "name": "Hello Chatkhil",
-          "description": "Medical and blood donation application for the Chatkhil community",
-          "applicationCategory": "MedicalApplication",
-          "operatingSystem": "Android",
-          "url": "https://play.google.com/store/apps/details?id=com.rhrsoft.rokto"
-        },
-        {
-          "@type": "SoftwareApplication",
-          "name": "ISTT University",
-          "description": "Institute routine management system for academic scheduling and coordination",
-          "applicationCategory": "EducationalApplication",
-          "operatingSystem": "Web",
-          "url": "https://istt-uni.web.app/"
-        },
-        {
-          "@type": "SoftwareApplication",
-          "name": "Sikhboi",
-          "description": "Comprehensive digital learning platform with interactive courses and certifications",
-          "applicationCategory": "EducationalApplication",
-          "operatingSystem": "Android",
-          "url": "https://play.google.com/store/apps/details?id=com.rhrsoft.sikhboinew"
-        },
-        {
-          "@type": "SoftwareApplication",
-          "name": "Bandhu AI",
-          "description": "Social networking platform for community connections and local business directory",
-          "applicationCategory": "SocialNetworkingApplication",
-          "operatingSystem": "Web",
-          "url": "https://bandhuai.app/"
-        },
-        {
-          "@type": "SoftwareApplication",
-          "name": "Richminis",
-          "description": "A modern, high-performance e-commerce platform designed for speed, scalability, and seamless user shopping experiences.",
-          "applicationCategory": "BusinessApplication",
-          "operatingSystem": "Web",
-          "url": "https://richminis.com"
-        },
-        {
-          "@type": "SoftwareApplication",
-          "name": "Ilmpurity",
-          "description": "A Learning Management System (LMS) featuring an AI-based exam system that utilizes Retrieval-Augmented Generation (RAG) and Computer Vision for automated answer checking.",
-          "applicationCategory": "EducationalApplication",
-          "operatingSystem": "Web",
-          "url": "https://ilmpurity.com"
-        },
-        {
-          "@type": "SoftwareApplication",
-          "name": "Care Life Touch",
-          "description": "A comprehensive healthcare and medicine service platform featuring real-time prescription parsing, pharmacy inventory syncing, and automated courier routing for express medicine deliveries.",
-          "applicationCategory": "MedicalApplication",
-          "operatingSystem": "Android",
-          "url": "https://play.google.com/store/apps/details?id=com.appibrium.carelifetouch"
-        }
-      ],
-      "knowsAbout": [
-        "Mobile App Development",
-        "Web Development",
-        "Embedded Systems",
-        "Artificial Intelligence",
-        "Machine Learning",
-        "IoT Solutions",
-        "React",
-        "Node.js",
-        "Python",
-        "Flutter",
-        "React Native",
-        "AWS",
-        "Docker",
-        "Kubernetes"
-      ]
-    }
-    </script>
-    
-    <!-- Local Business Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Appibrium",
-      "image": "https://appibrium.tech/txt_b.png",
-      "description": "Software development company in Dhaka, Bangladesh",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "23/A Shukrabad",
-        "addressLocality": "Dhaka",
-        "postalCode": "1207",
-        "addressCountry": "Bangladesh"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 23.8103,
-        "longitude": 90.4125
-      },
-      "url": "https://appibrium.tech",
-      "telephone": "+880-1789536985",
-      "openingHours": "Mo-Fr 09:00-18:00",
-      "priceRange": "$$"
-    }
-    </script>
-    
-    <!-- Portfolio/Projects Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Appibrium Software Projects Portfolio",
-      "description": "Comprehensive portfolio of software development projects by Appibrium",
-      "numberOfItems": 10,
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
-            "@type": "SoftwareApplication",
-            "name": "GoruSheba",
-            "url": "https://goru.help/",
-            "description": "Bangladesh's first intelligent cattle management system powered by AI & IoT",
-            "applicationCategory": "BusinessApplication"
-          }
-        },
-        {
-          "@type": "ListItem", 
-          "position": 2,
-          "item": {
-            "@type": "SoftwareApplication",
-            "name": "Junior Cambrian",
-            "url": "https://www.ekushey-tv.com/খেলার-ছলে-অনলাইনে-বাচ্চাদের-শেখাচ্ছে-জুনিয়র-ক্যাম্ব্রিয়ান/1360873111111142091",
-            "description": "Learning Management System with gamification features for enhanced student engagement",
-            "applicationCategory": "EducationalApplication"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 3, 
-          "item": {
-            "@type": "SoftwareApplication",
-            "name": "Sydrix AI",
-            "url": "https://sydrixai.com/",
-            "description": "Smart Study Management AI platform with personalized learning experiences",
-            "applicationCategory": "EducationalApplication"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "item": {
-            "@type": "SoftwareApplication", 
-            "name": "Hello Chatkhil",
-            "url": "https://play.google.com/store/apps/details?id=com.rhrsoft.rokto",
-            "description": "Medical and blood donation application for the Chatkhil community",
-            "applicationCategory": "MedicalApplication"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "item": {
-            "@type": "SoftwareApplication",
-            "name": "ISTT University", 
-            "url": "https://istt-uni.web.app/",
-            "description": "Institute routine management system for academic scheduling and coordination",
-            "applicationCategory": "EducationalApplication"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "item": {
-            "@type": "SoftwareApplication",
-            "name": "Sikhboi",
-            "url": "https://play.google.com/store/apps/details?id=com.rhrsoft.sikhboinew", 
-            "description": "Comprehensive digital learning platform with interactive courses and certifications",
-            "applicationCategory": "EducationalApplication"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "item": {
-            "@type": "SoftwareApplication",
-            "name": "Bandhu AI",
-            "url": "https://bandhuai.app/",
-            "description": "Social networking platform for community connections and local business directory",
-            "applicationCategory": "SocialNetworkingApplication"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 8,
-          "item": {
-            "@type": "SoftwareApplication",
-            "name": "Richminis",
-            "url": "https://richminis.com",
-            "description": "A modern, high-performance e-commerce platform designed for speed, scalability, and seamless user shopping experiences.",
-            "applicationCategory": "BusinessApplication"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 9,
-          "item": {
-            "@type": "SoftwareApplication",
-            "name": "Ilmpurity",
-            "url": "https://ilmpurity.com",
-            "description": "A Learning Management System (LMS) featuring an AI-based exam system that utilizes Retrieval-Augmented Generation (RAG) and Computer Vision for automated answer checking.",
-            "applicationCategory": "EducationalApplication"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 10,
-          "item": {
-            "@type": "SoftwareApplication",
-            "name": "Care Life Touch",
-            "url": "https://play.google.com/store/apps/details?id=com.appibrium.carelifetouch",
-            "description": "A comprehensive healthcare and medicine service platform featuring real-time prescription parsing, pharmacy inventory syncing, and automated courier routing for express medicine deliveries.",
-            "applicationCategory": "MedicalApplication"
-          }
+          ]
         }
       ]
     }
-    </script>
-
-    <!-- Bengali tagline injected below (hreflang bn handled above; avoid duplicate title/description meta) -->
-
-    <!-- Bengali Tagline in Hero Section (add after main English headline) -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var hero = document.querySelector('section#home .text-center h1');
-        if(hero) {
-          var bnTag = document.createElement('div');
-          bnTag.textContent = 'এপিব্রিয়াম - আপনার আস্থার সফটওয়্যার কোম্পানি';
-          bnTag.style.fontSize = '1.25rem';
-          bnTag.style.color = '#1DD1A1';
-          bnTag.style.marginTop = '0.5rem';
-          bnTag.style.fontWeight = 'bold';
-          hero.parentNode.insertBefore(bnTag, hero.nextSibling);
-        }
-      });
     </script>
   </head>
   <body>

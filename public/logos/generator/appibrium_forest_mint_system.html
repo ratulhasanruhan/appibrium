@@ -1,0 +1,292 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Jost',sans-serif;background:transparent;}
+
+:root{
+  --night:  #0A1A10;
+  --forest: #152B1C;
+  --deep:   #0D2317;
+  --mint:   #00E090;
+  --mintlo: #00B872;
+  --sage:   #7FFFD4;
+  --snow:   #F2FFF9;
+  --white:  #FAFCFA;
+}
+
+.wrap{display:flex;flex-direction:column;gap:12px;padding:8px 0 24px;}
+.sec{font-family:'Plus Jakarta Sans',sans-serif;font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--text-muted);padding:16px 2px 10px;border-top:0.5px solid var(--border);}
+.sec:first-of-type{border-top:none;padding-top:4px;}
+.canvas{border-radius:18px;padding:40px 52px;display:flex;align-items:center;justify-content:center;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;}
+
+/* icon */
+.icon{position:relative;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.icon .a{font-family:'Jost',sans-serif;font-weight:800;line-height:1;display:block;}
+.dot{position:absolute;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.dc{border-radius:50%;}
+
+/* sizes */
+.s96{width:96px;height:96px;border-radius:24px;}
+.s96 .a{font-size:72px;margin-bottom:-7px;}
+.s96 .dot{width:18px;height:18px;top:17px;right:17px;}
+.s96 .dc{width:9px;height:9px;}
+
+.s72{width:72px;height:72px;border-radius:18px;}
+.s72 .a{font-size:54px;margin-bottom:-5px;}
+.s72 .dot{width:14px;height:14px;top:13px;right:13px;}
+.s72 .dc{width:7px;height:7px;}
+
+.s52{width:52px;height:52px;border-radius:13px;}
+.s52 .a{font-size:38px;margin-bottom:-4px;}
+.s52 .dot{width:10px;height:10px;top:9px;right:9px;}
+.s52 .dc{width:5px;height:5px;}
+
+.s36{width:36px;height:36px;border-radius:9px;}
+.s36 .a{font-size:27px;margin-bottom:-3px;}
+.s36 .dot{width:7px;height:7px;top:6px;right:6px;}
+.s36 .dc{width:3.5px;height:3.5px;}
+
+.s24{width:24px;height:24px;border-radius:6px;}
+.s24 .a{font-size:18px;margin-bottom:-2px;}
+.s24 .dot{width:5px;height:5px;top:4px;right:4px;}
+.s24 .dc{width:2.5px;height:2.5px;}
+
+.s16{width:16px;height:16px;border-radius:4px;}
+.s16 .a{font-size:12px;margin-bottom:-1px;}
+.s16 .dot{width:4px;height:4px;top:2px;right:2px;}
+.s16 .dc{width:2px;height:2px;}
+
+.icon-col{display:flex;flex-direction:column;align-items:center;gap:7px;}
+.sz{font-family:'Plus Jakarta Sans',sans-serif;font-size:8px;letter-spacing:.04em;color:var(--text-muted);}
+
+/* mint on dark */
+.ig .a{color:var(--night);}
+.ig .dot{background:var(--night);}
+.ig .dc{background:var(--mint);}
+
+/* dark on mint */
+.id .a{color:var(--mint);}
+.id .dot{background:var(--mint);}
+.id .dc{background:var(--night);}
+
+/* white on dark */
+.iw .a{color:var(--white);}
+.iw .dot{background:var(--mint);}
+.iw .dc{background:var(--night);}
+
+.lockup{display:flex;align-items:center;gap:20px;}
+.lockup-sm{display:flex;align-items:center;gap:14px;}
+.wm{display:flex;flex-direction:column;gap:16px;}
+.name{font-family:'Jost',sans-serif;font-weight:800;letter-spacing:-0.042em;line-height:1;}
+.tag{font-family:'Plus Jakarta Sans',sans-serif;font-weight:400;letter-spacing:.46em;font-size:8.5px;text-transform:uppercase;}
+.tag-row{display:flex;align-items:center;gap:10px;}
+.tl{height:0.5px;flex:1;}
+.dash{width:24px;height:2px;border-radius:2px;background:var(--mint);flex-shrink:0;}
+
+</style>
+
+<div class="wrap">
+
+<!-- PALETTE -->
+<div class="sec">Palette — Forest Depth + Electric Mint</div>
+<div style="border-radius:14px;overflow:hidden;display:flex;height:52px;border:0.5px solid var(--border);">
+  <div style="flex:1;background:#0A1A10;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;">
+    <span style="font-family:'Plus Jakarta Sans';font-size:8px;font-weight:700;color:#00E090;">Night</span>
+    <span style="font-family:'Plus Jakarta Sans';font-size:7px;color:#00E090;opacity:.5;">#0A1A10</span>
+  </div>
+  <div style="flex:1;background:#0D2317;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;">
+    <span style="font-family:'Plus Jakarta Sans';font-size:8px;font-weight:700;color:#00E090;">Deep</span>
+    <span style="font-family:'Plus Jakarta Sans';font-size:7px;color:#00E090;opacity:.5;">#0D2317</span>
+  </div>
+  <div style="flex:1;background:#152B1C;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;">
+    <span style="font-family:'Plus Jakarta Sans';font-size:8px;font-weight:700;color:#00E090;">Forest</span>
+    <span style="font-family:'Plus Jakarta Sans';font-size:7px;color:#00E090;opacity:.5;">#152B1C</span>
+  </div>
+  <div style="flex:1;background:#00E090;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;">
+    <span style="font-family:'Plus Jakarta Sans';font-size:8px;font-weight:700;color:#0A1A10;">Mint</span>
+    <span style="font-family:'Plus Jakarta Sans';font-size:7px;color:#0A1A10;opacity:.6;">#00E090</span>
+  </div>
+  <div style="flex:1;background:#00B872;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;">
+    <span style="font-family:'Plus Jakarta Sans';font-size:8px;font-weight:700;color:#0A1A10;">Deep Mint</span>
+    <span style="font-family:'Plus Jakarta Sans';font-size:7px;color:#0A1A10;opacity:.6;">#00B872</span>
+  </div>
+  <div style="flex:1;background:#F2FFF9;border-left:0.5px solid #cde8d8;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;">
+    <span style="font-family:'Plus Jakarta Sans';font-size:8px;font-weight:700;color:#0A1A10;">Snow</span>
+    <span style="font-family:'Plus Jakarta Sans';font-size:7px;color:#0A1A10;opacity:.5;">#F2FFF9</span>
+  </div>
+</div>
+
+<!-- ICON SCALE -->
+<div class="sec">Logo 01 — Icon · All sizes · Forest Night bg</div>
+<div class="canvas" style="background:#0A1A10;">
+  <div style="display:flex;gap:20px;align-items:flex-end;flex-wrap:wrap;justify-content:center;">
+    <div class="icon-col">
+      <div class="icon ig s96" style="background:#00E090;"><span class="a">a</span><div class="dot"><div class="dc"></div></div></div>
+      <div class="sz">96px</div>
+    </div>
+    <div class="icon-col">
+      <div class="icon ig s72" style="background:#00E090;"><span class="a">a</span><div class="dot"><div class="dc"></div></div></div>
+      <div class="sz">72px</div>
+    </div>
+    <div class="icon-col">
+      <div class="icon ig s52" style="background:#00E090;"><span class="a">a</span><div class="dot"><div class="dc"></div></div></div>
+      <div class="sz">52px</div>
+    </div>
+    <div class="icon-col">
+      <div class="icon ig s36" style="background:#00E090;"><span class="a">a</span><div class="dot"><div class="dc"></div></div></div>
+      <div class="sz">36px</div>
+    </div>
+    <div class="icon-col">
+      <div class="icon ig s24" style="background:#00E090;"><span class="a">a</span><div class="dot"><div class="dc"></div></div></div>
+      <div class="sz">24px</div>
+    </div>
+    <div class="icon-col">
+      <div class="icon ig s16" style="background:#00E090;"><span class="a">a</span><div class="dot"><div class="dc"></div></div></div>
+      <div class="sz">16px</div>
+    </div>
+  </div>
+</div>
+
+<!-- ICON VARIANTS -->
+<div class="sec">Icon colour variants</div>
+<div class="grid3">
+  <div>
+    <div style="font-family:'Plus Jakarta Sans';font-size:9px;color:var(--text-muted);padding:0 2px 7px;">Mint on Night</div>
+    <div class="canvas" style="background:#0A1A10;min-height:130px;">
+      <div class="icon ig s72" style="background:#00E090;"><span class="a">a</span><div class="dot"><div class="dc"></div></div></div>
+    </div>
+  </div>
+  <div>
+    <div style="font-family:'Plus Jakarta Sans';font-size:9px;color:var(--text-muted);padding:0 2px 7px;">Night on Mint</div>
+    <div class="canvas" style="background:#00E090;min-height:130px;">
+      <div class="icon id s72" style="background:#0A1A10;"><span class="a">a</span><div class="dot"><div class="dc"></div></div></div>
+    </div>
+  </div>
+  <div>
+    <div style="font-family:'Plus Jakarta Sans';font-size:9px;color:var(--text-muted);padding:0 2px 7px;">On Snow</div>
+    <div class="canvas" style="background:#F2FFF9;border:0.5px solid #c8e8d8;min-height:130px;">
+      <div class="icon id s72" style="background:#0A1A10;"><span class="a">a</span><div class="dot"><div class="dc"></div></div></div>
+    </div>
+  </div>
+  <div>
+    <div style="font-family:'Plus Jakarta Sans';font-size:9px;color:var(--text-muted);padding:0 2px 7px;">On Deep Forest</div>
+    <div class="canvas" style="background:#0D2317;min-height:130px;">
+      <div class="icon ig s72" style="background:#00E090;"><span class="a">a</span><div class="dot"><div class="dc"></div></div></div>
+    </div>
+  </div>
+  <div>
+    <div style="font-family:'Plus Jakarta Sans';font-size:9px;color:var(--text-muted);padding:0 2px 7px;">On Forest Mid</div>
+    <div class="canvas" style="background:#152B1C;min-height:130px;">
+      <div class="icon ig s72" style="background:#00E090;"><span class="a">a</span><div class="dot"><div class="dc"></div></div></div>
+    </div>
+  </div>
+  <div>
+    <div style="font-family:'Plus Jakarta Sans';font-size:9px;color:var(--text-muted);padding:0 2px 7px;">Outlined</div>
+    <div class="canvas" style="background:#0A1A10;min-height:130px;">
+      <div class="icon s72" style="border:2.5px solid #00E090;border-radius:18px;">
+        <span class="a" style="color:#00E090;">a</span>
+        <div class="dot" style="background:#00E090;top:13px;right:13px;width:14px;height:14px;"><div class="dc" style="background:#0A1A10;width:7px;height:7px;"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WORDMARK -->
+<div class="sec">Logo 02 — Wordmark only</div>
+<div class="canvas" style="background:#0A1A10;margin-bottom:10px;">
+  <div class="wm" style="align-items:center;">
+    <div class="name" style="font-size:64px;color:#FAFCFA;"><span style="color:#00E090;">a</span>ppibrium</div>
+    <div class="tag-row">
+      <div class="tl" style="background:#00E090;opacity:.25;"></div>
+      <div class="tag" style="color:#00E090;opacity:.75;">Engineering the Future</div>
+      <div class="tl" style="background:#00E090;opacity:.25;"></div>
+    </div>
+  </div>
+</div>
+<div class="grid2">
+  <div class="canvas" style="background:#F2FFF9;border:0.5px solid #c0e0cc;min-height:120px;">
+    <div class="wm" style="align-items:center;">
+      <div class="name" style="font-size:46px;color:#0A1A10;"><span style="color:#00B872;">a</span>ppibrium</div>
+      <div class="tag-row">
+        <div class="tl" style="background:#0A1A10;opacity:.1;"></div>
+        <div class="tag" style="color:#0A1A10;opacity:.3;font-size:8px;">Engineering the Future</div>
+        <div class="tl" style="background:#0A1A10;opacity:.1;"></div>
+      </div>
+    </div>
+  </div>
+  <div class="canvas" style="background:#00E090;min-height:120px;">
+    <div class="wm" style="align-items:center;">
+      <div class="name" style="font-size:46px;color:#0A1A10;">appibrium</div>
+      <div class="tag-row">
+        <div class="tl" style="background:#0A1A10;opacity:.2;"></div>
+        <div class="tag" style="color:#0A1A10;opacity:.4;font-size:8px;">Engineering the Future</div>
+        <div class="tl" style="background:#0A1A10;opacity:.2;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FULL LOCKUP -->
+<div class="sec">Logo 03 — Icon + Wordmark · Full system</div>
+<div class="canvas" style="background:#0A1A10;margin-bottom:10px;">
+  <div class="lockup">
+    <div class="icon ig s72" style="background:#00E090;"><span class="a">a</span><div class="dot"><div class="dc"></div></div></div>
+    <div class="wm">
+      <div class="name" style="font-size:52px;color:#FAFCFA;"><span style="color:#00E090;">a</span>ppibrium</div>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:12px;">
+        <div class="dash"></div>
+        <div class="tag" style="color:#00E090;opacity:.7;font-size:8.5px;">Engineering the Future</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="grid2" style="margin-bottom:10px;">
+  <div class="canvas" style="background:#F2FFF9;border:0.5px solid #c0e0cc;min-height:110px;padding:28px 36px;">
+    <div class="lockup-sm">
+      <div class="icon id s52" style="background:#0A1A10;"><span class="a">a</span><div class="dot"><div class="dc"></div></div></div>
+      <div class="wm">
+        <div class="name" style="font-size:36px;color:#0A1A10;"><span style="color:#00B872;">a</span>ppibrium</div>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:8px;">
+          <div style="width:18px;height:1.5px;border-radius:1px;background:#00B872;"></div>
+          <div class="tag" style="color:#0A1A10;opacity:.3;font-size:7.5px;">Engineering the Future</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="canvas" style="background:#152B1C;min-height:110px;padding:28px 36px;">
+    <div class="lockup-sm">
+      <div class="icon ig s52" style="background:#00E090;"><span class="a">a</span><div class="dot"><div class="dc"></div></div></div>
+      <div class="wm">
+        <div class="name" style="font-size:36px;color:#F2FFF9;"><span style="color:#00E090;">a</span>ppibrium</div>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:8px;">
+          <div style="width:18px;height:1.5px;border-radius:1px;background:#00E090;"></div>
+          <div class="tag" style="color:#00E090;opacity:.6;font-size:7.5px;">Engineering the Future</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STACKED -->
+<div class="sec">Stacked · Square format · Social media · App store</div>
+<div class="grid2">
+  <div class="canvas" style="background:#0A1A10;min-height:200px;flex-direction:column;gap:16px;">
+    <div class="icon ig s72" style="background:#00E090;"><span class="a">a</span><div class="dot"><div class="dc"></div></div></div>
+    <div style="text-align:center;">
+      <div class="name" style="font-size:24px;color:#FAFCFA;letter-spacing:.08em;"><span style="color:#00E090;">A</span>PPIBRIUM</div>
+      <div class="tag" style="color:#00E090;opacity:.55;font-size:8px;margin-top:5px;">TECHNOLOGY CO.</div>
+    </div>
+  </div>
+  <div class="canvas" style="background:#00E090;min-height:200px;flex-direction:column;gap:16px;">
+    <div class="icon id s72" style="background:#0A1A10;"><span class="a">a</span><div class="dot"><div class="dc"></div></div></div>
+    <div style="text-align:center;">
+      <div class="name" style="font-size:24px;color:#0A1A10;letter-spacing:.08em;">APPIBRIUM</div>
+      <div class="tag" style="color:#0A1A10;opacity:.4;font-size:8px;margin-top:5px;">TECHNOLOGY CO.</div>
+    </div>
+  </div>
+</div>
+
+</div>

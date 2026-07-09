@@ -1,12 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Button } from '@/components/ui/button.jsx'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
-import { Badge } from '@/components/ui/badge.jsx'
 import {
   ArrowLeft,
   ExternalLink,
-  Filter,
   Search,
   Code,
   Globe,
@@ -16,42 +12,32 @@ import {
   Heart,
   Building2,
   Users,
-  Monitor
+  Monitor,
+  ArrowRight
 } from 'lucide-react'
-import { Input } from '@/components/ui/input.jsx'
 import projectsData from '../lib/projects.json'
-import logoText from '../assets/txt_b.png'
-import logoWhite from '../assets/twx_wh.png'
 
 const categoryIcons = {
-  "AI/IoT Solution": <Brain className="w-6 h-6" />,
-  "Educational Technology": <GraduationCap className="w-6 h-6" />,
-  "AI/ML Solution": <Brain className="w-6 h-6" />,
-  "Healthcare Technology": <Heart className="w-6 h-6" />,
-  "Educational Management": <Building2 className="w-6 h-6" />,
-  "Digital Learning Platform": <Monitor className="w-6 h-6" />,
-  "Business Solution": <Building2 className="w-6 h-6" />,
-  "Personal Branding": <Users className="w-6 h-6" />,
-  "Social Platform": <Globe className="w-6 h-6" />
+  "AI/IoT Solution": <Brain className="w-5 h-5" />,
+  "Educational Technology": <GraduationCap className="w-5 h-5" />,
+  "AI/ML Solution": <Brain className="w-5 h-5" />,
+  "Healthcare Technology": <Heart className="w-5 h-5" />,
+  "Educational Management": <Building2 className="w-5 h-5" />,
+  "Digital Learning Platform": <Monitor className="w-5 h-5" />,
+  "Business Solution": <Building2 className="w-5 h-5" />,
+  "Personal Branding": <Users className="w-5 h-5" />,
+  "Social Platform": <Globe className="w-5 h-5" />
 }
 
-function Works() {
-  const [isDarkMode, setIsDarkMode] = useState(false)
+export default function Works() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [filteredProjects, setFilteredProjects] = useState(projectsData)
-
-    const navigate = useNavigate()
+  const navigate = useNavigate()
 
   useEffect(() => {
     document.title = 'Our Works & Portfolio | Appibrium'
-  }, [])
-
-  useEffect(() => {
-    // Check for dark mode preference
-    if (document.documentElement.classList.contains('dark')) {
-      setIsDarkMode(true)
-    }
+    window.scrollTo({ top: 0 })
   }, [])
 
   useEffect(() => {
@@ -77,81 +63,91 @@ function Works() {
   const categories = ['All', ...new Set(projectsData.map(project => project.category))]
 
   const goToHome = () => {
-    window.location.href = '/'
+    navigate('/')
   }
 
-    const goToContact = () => {
-      navigate('/#contact')
-    }
+  const goToContact = () => {
+    navigate('/#contact')
+  }
 
   return (
-    <div className={`min-h-screen bg-gray-50 dark:bg-gray-900 ${isDarkMode ? 'dark' : ''}`}>
+    <div className="app-root works-page-root">
+      {/* Editorial Decorative Grid Lines */}
+      <div className="layout-grid-lines" aria-hidden="true">
+        <div className="line-vert" />
+        <div className="line-vert" />
+        <div className="line-vert" />
+      </div>
+
       {/* Header */}
-      <header className="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-4">
-              <Button 
-                variant="ghost" 
-                size="sm" 
-                onClick={goToHome}
-                className="flex items-center space-x-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                <span>Back to Home</span>
-              </Button>
-              <div className="h-6 w-px bg-gray-300 dark:bg-gray-600"></div>
+      <header className="main-header scrolled" role="banner">
+        <div className="nav-inner">
+          <div className="flex items-center space-x-4" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <button 
+              onClick={goToHome}
+              className="btn btn-outline"
+              style={{ padding: '0.45rem 1rem', fontSize: '0.85rem' }}
+            >
+              <ArrowLeft size={14} />
+              <span>Back</span>
+            </button>
+            <div style={{ width: '1px', height: '24px', background: 'var(--light-border)' }} />
+            <a href="/" aria-label="Appibrium - Home">
               <img 
-                src={isDarkMode ? logoWhite : logoText} 
+                src="/logos/wordmark/wordmark_notag_dark.svg" 
                 alt="Appibrium" 
-                className="h-8" 
+                height={32}
+                style={{ height: '32px', width: 'auto' }}
               />
-            </div>
-            <div className="flex items-center space-x-2">
-              <Badge variant="outline" className="text-primary border-primary">
-                {filteredProjects.length} Projects
-              </Badge>
-            </div>
+            </a>
+          </div>
+          <div className="portfolio-badge-count">
+            <span className="ptag" style={{ background: 'var(--night)', color: 'var(--snow)' }}>
+              {filteredProjects.length} Projects
+            </span>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/5 to-accent/5 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Our Works
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-            Explore our portfolio of innovative software solutions across various industries. 
-            From AI-powered applications to educational platforms, discover how we transform ideas into reality.
-          </p>
+      <section className="section" style={{ padding: '5rem 0 3rem' }}>
+        <div className="section-container">
+          <div className="section-header" style={{ marginBottom: '2.5rem' }}>
+            <span className="section-tag">PORTFOLIO</span>
+            <h1 className="section-title">Our Works</h1>
+            <p className="section-desc">
+              Explore our portfolio of innovative engineering solutions. 
+              From AI-powered platforms to connected IoT devices, discover how we build scalable systems.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Filters Section */}
-      <section className="py-8 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+      <section className="py-6" style={{ background: 'var(--snow)', borderTop: '1px solid var(--light-border)', borderBottom: '1px solid var(--light-border)', position: 'relative', zIndex: '2' }}>
+        <div className="section-container">
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.25rem', alignItems: 'center', justifyContent: 'space-between' }}>
             {/* Search */}
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-              <Input
+            <div style={{ position: 'relative', flex: '1', maxWidth: '400px', minWidth: '260px' }}>
+              <Search size={16} style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--grey-text)', opacity: '0.7' }} />
+              <input
                 type="text"
-                placeholder="Search projects..."
+                placeholder="Search projects by name or technology..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10"
+                className="form-input"
+                style={{ paddingLeft: '2.75rem' }}
               />
             </div>
 
             {/* Category Filter */}
-            <div className="flex items-center space-x-2">
-              <Filter className="w-4 h-4 text-gray-500" />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <span style={{ fontSize: '0.85rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Filter:</span>
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="form-input form-select"
+                style={{ width: '220px', padding: '0.6rem 2.5rem 0.6rem 1rem' }}
               >
                 {categories.map(category => (
                   <option key={category} value={category}>
@@ -165,81 +161,67 @@ function Works() {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section" style={{ padding: '4rem 0' }}>
+        <div className="section-container">
           {filteredProjects.length === 0 ? (
-            <div className="text-center py-12">
-              <Code className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                No projects found
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Try adjusting your search or filter criteria.
-              </p>
+            <div style={{ textAlign: 'center', padding: '5rem 0' }}>
+              <Code size={48} style={{ margin: '0 auto 1.5rem', color: 'var(--grey-text)', opacity: '0.4' }} />
+              <h3 style={{ fontSize: '1.25rem', fontWeight: '800', marginBottom: '0.5rem' }}>No projects found</h3>
+              <p className="section-desc" style={{ margin: '0 auto' }}>Try adjusting your search query or filter choice.</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="portfolio-grid">
               {filteredProjects.map((project, index) => (
-                <Card key={index} className="hover:shadow-lg transition-all duration-300 group overflow-hidden p-0">
-                  <div className="relative">
-                    {/* Project Image */}
-                    <div className="w-full h-56 bg-gradient-to-br from-primary/20 to-accent/20 overflow-hidden">
-                      {project.image ? (
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center">
-                          {categoryIcons[project.category] || <Code className="w-16 h-16 text-primary/60" />}
-                        </div>
-                      )}
-                    </div>
-                    <div className="absolute top-3 left-3">
-                      <Badge variant="secondary" className="bg-primary text-white border-0 font-medium">
-                        {project.category}
-                      </Badge>
-                    </div>
+                <article key={index} className="portfolio-card">
+                  <div className="portfolio-img">
+                    {project.image ? (
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    ) : (
+                      <div className="portfolio-placeholder">
+                        {categoryIcons[project.category] || <Code size={32} />}
+                      </div>
+                    )}
+                    <span className="portfolio-cat">{project.category}</span>
                   </div>
 
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-base text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+                  <div className="portfolio-info">
+                    <h3>{project.title}</h3>
+                    <p style={{ fontSize: '0.88rem', color: 'var(--grey-text)', lineHeight: '1.6', minHeight: '4.8rem' }}>
                       {project.description}
                     </p>
                     
                     {/* Technologies */}
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="portfolio-tags" style={{ margin: '0.5rem 0 1rem' }}>
                       {project.technologies.slice(0, 4).map((tech, techIndex) => (
-                        <Badge key={techIndex} variant="secondary" className="text-xs">
+                        <span key={techIndex} className="ptag">
                           {tech}
-                        </Badge>
+                        </span>
                       ))}
                       {project.technologies.length > 4 && (
-                        <Badge variant="secondary" className="text-xs">
+                        <span className="ptag">
                           +{project.technologies.length - 4} more
-                        </Badge>
+                        </span>
                       )}
                     </div>
 
                     {/* Action Button */}
                     {project.link && project.link !== "#" && (
-                      <Button 
+                      <button 
                         onClick={() => window.open(project.link, '_blank')}
-                        className="w-full group"
-                        variant="outline"
+                        className="btn btn-outline"
+                        style={{ width: '100%', justifyContent: 'center' }}
                       >
                         View Project
-                        <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </Button>
+                        <ExternalLink size={14} />
+                      </button>
                     )}
                   </div>
-                </Card>
+                </article>
               ))}
             </div>
           )}
@@ -247,36 +229,41 @@ function Works() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gray-100 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Ready to Start Your Project?
+      <section className="section section--alt" style={{ textAlign: 'center' }}>
+        <div className="section-container" style={{ maxWidth: '640px' }}>
+          <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '1rem' }}>
+            Ready to start a project?
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help transform your ideas into powerful software solutions.
+          <p className="section-desc" style={{ margin: '0 auto 2rem' }}>
+            Let's discuss how we can engineer your ideas into powerful, future-ready software and hardware systems.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={goToHome}>
-              Get Started
-            </Button>
-            <Button size="lg" variant="outline" onClick={goToContact}>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <button className="btn btn-primary" onClick={goToContact}>
               Contact Us
-            </Button>
+              <ArrowRight size={16} />
+            </button>
+            <button className="btn btn-outline" onClick={goToHome}>
+              Back to Home
+            </button>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <img src={logoWhite} alt="Appibrium" className="h-12 mx-auto mb-4" loading="lazy" decoding="async" />
-          <p className="text-gray-400">
-            &copy; {new Date().getFullYear()} Appibrium. All rights reserved.
+      <footer id="main-footer" role="contentinfo">
+        <div className="section-container" style={{ textAlign: 'center', paddingBottom: '3rem' }}>
+          <img 
+            src="/logos/wordmark/wordmark_notag_dark.svg" 
+            alt="Appibrium" 
+            height={36} 
+            style={{ height: '36px', width: 'auto', margin: '0 auto 1.5rem' }} 
+            loading="lazy" 
+          />
+          <p style={{ fontSize: '0.85rem', color: 'var(--grey-text)' }}>
+            &copy; {new Date().getFullYear()} Appibrium Technology Co. All rights reserved.
           </p>
         </div>
       </footer>
     </div>
   )
 }
-
-export default Works

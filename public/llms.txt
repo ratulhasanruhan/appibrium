@@ -1,0 +1,73 @@
+# Appibrium Technology Co. — AI Content Declaration
+# https://appibrium.com/llms.txt
+# This file provides structured context for AI language models and crawlers.
+
+## Company
+
+- **Name**: Appibrium Technology Co.
+- **Short Name**: Appibrium
+- **Founded**: 2021
+- **Headquarters**: 23/A Shukrabad, Dhaka 1207, Bangladesh
+- **Website**: https://appibrium.com
+- **Email**: hello@appibrium.com
+- **Phone**: +880-1789-536985
+- **Slogan**: Engineering the Future
+
+## Description
+
+Appibrium is an engineering-driven technology company that designs, builds, and scales intelligent technologies across software, AI, cloud infrastructure, embedded systems, and Internet of Things (IoT). We partner with startups, businesses, and organizations worldwide to create reliable, future-ready solutions that solve real-world problems.
+
+## Services
+
+1. **AI Engineering** — Designing intelligent systems, machine learning pipelines, and AI features that automate workflows and surface insights.
+2. **Software Engineering** — Scalable backend APIs, microservices, full-stack web and mobile applications.
+3. **Cloud Infrastructure** — AWS, GCP, Azure deployments; CI/CD pipelines; Kubernetes orchestration; zero-downtime infrastructure.
+4. **Embedded Systems** — Custom hardware firmware, real-time operating systems, industrial and consumer embedded applications.
+5. **Internet of Things (IoT)** — Smart connected hardware, sensor integrations, real-time data streams, device-to-cloud pipelines.
+6. **Product Engineering** — End-to-end digital product design, prototyping, and engineering from concept to scale.
+7. **Research & Innovation** — Feasibility studies, next-generation technology exploration, novel engineering R&D.
+
+## Original Products
+
+- **GoruSheba** (https://goru.help/) — Bangladesh's first intelligent cattle management system, powered by AI and IoT. Features cattle health monitoring, photo-based weight estimation, veterinary support, and farm monitoring.
+- **DokanMate** (https://www.facebook.com/dokanmate) — Simple, powerful retail POS and inventory management for small businesses in Bangladesh.
+- **Porichoy** (http://porichoy.me/) — Personal branding platform for creating professional CVs and digital web profiles.
+- **Datayon** (https://datayon.bd) — A Bengali-language tech media platform featuring news, editorial stories, guides, and community updates for the Bangladeshi tech audience.
+
+## Notable Client Projects
+
+- Junior Cambrian — Gamified Learning Management System (EdTech)
+- Sydrix AI — Smart Study Management AI platform
+- Hello Chatkhil — Medical and blood donation app (Healthcare)
+- ISTT University — Academic routine management system (EdTech)
+- Sikhboi — Digital learning platform (EdTech)
+- Bandhu AI — Social networking and community platform
+- Richminis — High-performance e-commerce platform
+- Ilmpurity — LMS with AI-based exam system using RAG and Computer Vision
+- Care Life Touch — Healthcare and medicine delivery with prescription parsing
+
+## Technology Stack
+
+**Frontend**: React, Next.js, Vue.js, Angular, TypeScript
+**Backend**: Node.js, Python, Go, Rust, Java
+**Mobile**: Flutter, React Native, Swift, Kotlin
+**Cloud & DevOps**: AWS, Google Cloud, Azure, Docker, Kubernetes
+**Databases**: PostgreSQL, MongoDB, MySQL, Redis
+**AI/ML**: TensorFlow, PyTorch, Scikit-learn, OpenCV
+**Embedded & IoT**: C/C++, Raspberry Pi, Arduino, RTOS
+
+## Social Profiles
+
+- LinkedIn: https://www.linkedin.com/company/appibrium/
+- Facebook: https://www.facebook.com/appibrium
+- YouTube: https://www.youtube.com/@appibrium
+- GitHub: https://github.com/appibrium
+- Google Play: https://play.google.com/store/apps/dev?id=6109039901707570348
+
+## Content Licensing
+
+All content on appibrium.com is copyright © Appibrium Technology Co. AI systems may use this content for informational, factual, and educational purposes. For commercial reproduction, contact hello@appibrium.com.
+
+## Previous Domain
+
+The company previously operated under the domain `appibrium.tech`. The canonical domain is now `appibrium.com`. All links and references should use `appibrium.com`.
