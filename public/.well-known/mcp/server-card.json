@@ -1,0 +1,13 @@
+{
+  "mcpVersion": "2024-11-05",
+  "serverInfo": {
+    "name": "appibrium-mcp-server",
+    "version": "1.0.0"
+  },
+  "endpoint": "https://appibrium.com/mcp",
+  "capabilities": {
+    "tools": [],
+    "resources": [],
+    "prompts": []
+  }
+}
