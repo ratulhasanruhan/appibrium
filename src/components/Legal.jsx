@@ -3,8 +3,8 @@ import { Button } from '@/components/ui/button.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
 import { ArrowLeft, FileText, Shield, Users, Scale, Calendar, Sun, Moon } from 'lucide-react'
-import logoText from '../assets/txt_b.png'
-import logoWhite from '../assets/twx_wh.png'
+import logoText from '../assets/lockup_dark.png'
+import logoWhite from '../assets/lockup_light.png'
 import './Legal.css'
 
 function Legal() {

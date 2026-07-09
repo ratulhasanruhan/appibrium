@@ -477,7 +477,7 @@ export default function App() {
                 <img src="/logos/lockup/lockup_light.svg" alt="Appibrium" width={130} height={36} />
                 <div className="about-divider" aria-hidden="true" />
                 <iframe
-                  src="https://www.youtube.com/embed/et3HzmdgwcY?si=LLceXCnmra_Q1QFy"
+                  src="https://www.youtube.com/embed/et3HzmdgwcY?si=LLceXCnmra_Q1QFy&controls=0"
                   title="YouTube video player"
                   className="about-banner"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

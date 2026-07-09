@@ -14,16 +14,16 @@ import {
   Sun,
   Moon
 } from 'lucide-react'
-import logoText from '../assets/txt_b.png'
-import logoWhite from '../assets/twx_wh.png'
-import miniFav from '../assets/mini_fav.png'
+import logoText from '../assets/lockup_dark.png'
+import logoWhite from '../assets/lockup_light.png'
+import miniFav from '../assets/icon_mint.png'
 import '../App.css'
 
 const brandColors = [
-  { name: 'Appibrium Teal', hex: '#1DD1A1' },
-  { name: 'Light Teal', hex: '#4FD1C7' },
-  { name: 'Dark Gray', hex: '#2D3748' },
-  { name: 'Muted Gray', hex: '#718096' }
+  { name: 'Electric Mint', hex: '#00E090' },
+  { name: 'Forest Night', hex: '#0A1A10' },
+  { name: 'Deep Surface', hex: '#0D2317' },
+  { name: 'Snow Canvas', hex: '#F2FFF9' }
 ]
 
 const dos = [

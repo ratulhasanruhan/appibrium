@@ -2,7 +2,7 @@ import { StrictMode, lazy, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './index.css'
-import faviconUrl from './assets/mini_fav.png'
+import faviconUrl from './assets/icon_mint.png'
 import App from './App.jsx'
 import { RouteFallback } from './components/RouteFallback.jsx'
 
