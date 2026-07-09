@@ -1030,7 +1030,7 @@ export default function App() {
                 <li><button onClick={() => scrollTo('products')}>Originals Portfolio</button></li>
                 <li><a href="/works">All Client Works</a></li>
                 <li><a href="https://appibrium.github.io" target="_blank" rel="noopener noreferrer">Media Kit</a></li>
-                <li><a href="/legal.html" target="_blank" rel="noopener noreferrer">Legal &amp; Privacy</a></li>
+                <li><a href="/legal" target="_blank" rel="noopener noreferrer">Legal &amp; Privacy</a></li>
                 <li><a href="https://careers.appibrium.com" target="_blank" rel="noopener noreferrer">Careers</a></li>
               </ul>
             </div>
@@ -1051,7 +1051,7 @@ export default function App() {
             <div className="footer-bottom-links">
               <a href="https://appibrium.github.io" target="_blank" rel="noopener noreferrer">Media Kit</a>
               <span aria-hidden="true">&middot;</span>
-              <a href="/legal.html" target="_blank" rel="noopener noreferrer">Legal &amp; Privacy</a>
+              <a href="/legal" target="_blank" rel="noopener noreferrer">Legal &amp; Privacy</a>
               <span aria-hidden="true">&middot;</span>
               <a href="mailto:hello@appibrium.com">hello@appibrium.com</a>
             </div>

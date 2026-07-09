@@ -6,9 +6,22 @@ import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    {
+      name: 'route-legal-html',
+      configureServer(server) {
+        server.middlewares.use((req, res, next) => {
+          if (req.url === '/legal' || req.url === '/legal/') {
+            req.url = '/legal.html';
+          }
+          next();
+        });
+      }
+    }
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

@@ -55,7 +55,11 @@
       ]
     }
   ],
+  "redirects": [
+    { "source": "/legal.html", "destination": "/legal", "permanent": true }
+  ],
   "rewrites": [
+    { "source": "/legal", "destination": "/legal.html" },
     { "source": "/((?!.well-known/).*)", "destination": "/" }
   ]
 }
