@@ -7,7 +7,6 @@ import App from './App.jsx'
 import { RouteFallback } from './components/RouteFallback.jsx'
 
 const Works = lazy(() => import('./components/Works.jsx'))
-const MediaKit = lazy(() => import('./components/MediaKit.jsx'))
 
 {
   const ensureLink = (rel) => {
@@ -31,7 +30,6 @@ createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/works" element={<Works />} />
-          <Route path="/media-kit" element={<MediaKit />} />
         </Routes>
       </Suspense>
     </Router>

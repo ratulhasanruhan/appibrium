@@ -12,7 +12,7 @@ import {
   Zap, Database, Terminal, Smartphone, Globe,
   Clock, Award, Users, ShieldCheck, Check
 } from 'lucide-react'
-import appibriumBanner from './assets/appibrium_banner.png'
+import appibriumBanner from './assets/social_cover.png'
 import './App.css'
 
 // ── Animation Variants ───────────────────────────────────────────
@@ -271,12 +271,12 @@ export default function App() {
   }
 
   const NAV_LINKS = [
-    { label: 'About', id: 'about' },
-    { label: 'Services', id: 'services' },
-    { label: 'Process', id: 'process' },
-    { label: 'Originals', id: 'products' },
-    { label: 'Portfolio', id: 'portfolio' },
-    { label: 'Contact', id: 'contact' }
+    { label: 'About', id: 'about', type: 'local' },
+    { label: 'Services', id: 'services', type: 'local' },
+    { label: 'Originals', id: 'products', type: 'local' },
+    { label: 'Works', id: 'portfolio', type: 'local' },
+    { label: 'Careers', url: 'https://careers.appibrium.com', type: 'external' },
+    { label: 'Labs', url: 'https://labs.appibrium.com', type: 'external' }
   ]
 
   // Filter projects based on category
@@ -305,27 +305,45 @@ export default function App() {
       <header id="main-header" className={`main-header${scrolled ? ' scrolled' : ''}`} role="banner">
         <div className="nav-inner">
           <a href="/" className="nav-logo" aria-label="Appibrium – Home">
-            <img src="/logos/wordmark/wordmark_notag_dark.svg" alt="Appibrium" width={148} height={38} />
+            <img src="/logos/lockup/lockup_w4_light.svg" alt="Appibrium logo" width={175} height={38} />
           </a>
 
           <nav id="main-nav" role="navigation" aria-label="Main navigation" className={menuOpen ? 'open' : ''}>
             <ul role="list">
-              {NAV_LINKS.map(({ label, id }) => (
-                <li key={id}>
-                  <button
-                    onClick={() => scrollTo(id)}
-                    className={activeSection === id ? 'active' : ''}
-                    aria-current={activeSection === id ? 'location' : undefined}
-                  >
-                    {label}
-                  </button>
+              {NAV_LINKS.map((link) => (
+                <li key={link.label}>
+                  {link.type === 'local' ? (
+                    <button
+                      onClick={() => scrollTo(link.id)}
+                      className={activeSection === link.id ? 'active' : ''}
+                      aria-current={activeSection === link.id ? 'location' : undefined}
+                    >
+                      {link.label}
+                    </button>
+                  ) : link.type === 'route' ? (
+                    <Link
+                      to={link.url}
+                      className="nav-works-link"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="nav-works-link"
+                    >
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
-              <li>
-                <a href="/works" className="nav-works-link">All Works</a>
-              </li>
             </ul>
-            <button className="btn btn-primary nav-cta" onClick={() => scrollTo('contact')}>
+            <button 
+              className="btn btn-primary btn-sm nav-cta" 
+              onClick={() => scrollTo('contact')}
+            >
               Start a Project
             </button>
           </nav>
@@ -380,10 +398,10 @@ export default function App() {
             </motion.p>
 
             <motion.div className="hero-ctas" variants={fadeUp} custom={0.26}>
-              <button className="btn btn-primary" onClick={() => scrollTo('products')} id="hero-portfolio-btn">
+              <a href="/works" className="btn btn-primary" id="hero-portfolio-btn">
                 View Our Work
                 <ArrowRight size={16} aria-hidden="true" />
-              </button>
+              </a>
               <button className="btn btn-outline" onClick={() => scrollTo('contact')} id="hero-contact-btn">
                 Start a Project
               </button>
@@ -865,7 +883,14 @@ export default function App() {
                   <div className="contact-method-icon" aria-hidden="true"><MapPin size={18} /></div>
                   <div>
                     <h4>Our Office</h4>
-                    <p>23/A Shukrabad, Dhaka,<br />Bangladesh 1207</p>
+                    <a 
+                      href="https://maps.app.goo.gl/iB4C2nVc3x5mFe1i6" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="contact-link"
+                    >
+                      23/A Shukrabad, Dhaka,<br />Bangladesh 1207
+                    </a>
                   </div>
                 </div>
               </div>
@@ -967,7 +992,7 @@ export default function App() {
           <div className="footer-top">
             <div className="footer-brand">
               <a href="/" aria-label="Appibrium – Back to top">
-                <img src="/logos/lockup/lockup_light.svg" alt="Appibrium" width={148} height={38} loading="lazy" />
+                <img src="/logos/lockup/lockup_light.svg" alt="Appibrium" width={210} height={54} loading="lazy" style={{ height: '54px', width: 'auto' }} />
               </a>
               <p className="footer-desc">Appibrium Technology Co. — engineering intelligent technologies across AI, software, cloud, embedded systems, and IoT. Building the future, one system at a time.</p>
               <div className="footer-socials" aria-label="Appibrium social channels">
@@ -1003,7 +1028,7 @@ export default function App() {
                 <li><button onClick={() => scrollTo('process')}>How We Build</button></li>
                 <li><button onClick={() => scrollTo('products')}>Originals Portfolio</button></li>
                 <li><a href="/works">All Client Works</a></li>
-                <li><Link to="/media-kit">Media Kit</Link></li>
+                <li><a href="https://appibrium.github.io" target="_blank" rel="noopener noreferrer">Media Kit</a></li>
                 <li><a href="/legal.html" target="_blank" rel="noopener noreferrer">Legal &amp; Privacy</a></li>
                 <li><a href="https://careers.appibrium.com" target="_blank" rel="noopener noreferrer">Careers</a></li>
               </ul>
@@ -1014,7 +1039,7 @@ export default function App() {
               <ul role="list" className="footer-contact-list">
                 <li><a href="mailto:hello@appibrium.com" id="footer-email">hello@appibrium.com</a></li>
                 <li><a href="tel:+8801789536985">+880 1789 536 985</a></li>
-                <li>23/A Shukrabad, Dhaka,<br />Bangladesh 1207</li>
+                <li><a href="https://maps.app.goo.gl/iB4C2nVc3x5mFe1i6" target="_blank" rel="noopener noreferrer">23/A Shukrabad, Dhaka,<br />Bangladesh 1207</a></li>
                 <li><a href="https://appibrium.com" id="footer-website">appibrium.com</a></li>
               </ul>
             </div>
@@ -1023,7 +1048,7 @@ export default function App() {
           <div className="footer-bottom">
             <p>&copy; {new Date().getFullYear()} Appibrium Technology Co. All rights reserved.</p>
             <div className="footer-bottom-links">
-              <Link to="/media-kit">Media Kit</Link>
+              <a href="https://appibrium.github.io" target="_blank" rel="noopener noreferrer">Media Kit</a>
               <span aria-hidden="true">&middot;</span>
               <a href="/legal.html" target="_blank" rel="noopener noreferrer">Legal &amp; Privacy</a>
               <span aria-hidden="true">&middot;</span>

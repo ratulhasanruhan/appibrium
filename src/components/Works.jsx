@@ -94,17 +94,12 @@ export default function Works() {
             <div style={{ width: '1px', height: '24px', background: 'var(--light-border)' }} />
             <a href="/" aria-label="Appibrium - Home">
               <img 
-                src="/logos/wordmark/wordmark_notag_dark.svg" 
+                src="/logos/lockup/lockup_w4_light.svg" 
                 alt="Appibrium" 
                 height={32}
                 style={{ height: '32px', width: 'auto' }}
               />
             </a>
-          </div>
-          <div className="portfolio-badge-count">
-            <span className="ptag" style={{ background: 'var(--night)', color: 'var(--snow)' }}>
-              {filteredProjects.length} Projects
-            </span>
           </div>
         </div>
       </header>
