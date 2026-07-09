@@ -4,19 +4,24 @@
   "description": "Appibrium is an engineering company that designs, builds, and scales intelligent technologies across AI, software, cloud infrastructure, embedded systems, and IoT.",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/android-chrome-512x512.png",
+      "src": "/logos/icon/icon_mint_on_transparent_512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "src": "/logos/icon/icon_mint_on_transparent_256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/logos/icon/icon_mint_on_transparent_128.png",
+      "sizes": "128x128",
+      "type": "image/png"
     }
   ],
-  "theme_color": "#0A1A10",
-  "background_color": "#0A1A10",
+  "theme_color": "#FAF8F5",
+  "background_color": "#FAF8F5",
   "display": "standalone",
   "start_url": "/",
   "scope": "/",
