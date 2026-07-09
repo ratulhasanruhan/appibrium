@@ -1,0 +1,19 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://appibrium.com/",
+      "service-desc": [
+        {
+          "href": "https://appibrium.com/brand.json",
+          "type": "application/json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://appibrium.com/llms.txt",
+          "type": "text/plain"
+        }
+      ]
+    }
+  ]
+}

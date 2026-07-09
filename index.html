@@ -293,6 +293,46 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- WebMCP Tool Integration for AI Agent Discovery -->
+    <script>
+      (function() {
+        if (typeof navigator !== 'undefined' && navigator.modelContext) {
+          const toolDef = {
+            name: 'get_brand_info',
+            description: 'Get corporate details, services, contact info, and products of Appibrium Technology Co.',
+            inputSchema: {
+              type: 'object',
+              properties: {}
+            },
+            execute: async () => {
+              try {
+                const res = await fetch('/brand.json');
+                return await res.json();
+              } catch (e) {
+                return { error: 'Failed to fetch brand details' };
+              }
+            }
+          };
+
+          if (typeof navigator.modelContext.registerTool === 'function') {
+            try {
+              navigator.modelContext.registerTool(toolDef);
+            } catch (e) {
+              console.warn('WebMCP registerTool failed:', e);
+            }
+          }
+          if (typeof navigator.modelContext.provideContext === 'function') {
+            try {
+              navigator.modelContext.provideContext({
+                tools: [toolDef]
+              });
+            } catch (e) {
+              console.warn('WebMCP provideContext failed:', e);
+            }
+          }
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
