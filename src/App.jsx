@@ -12,7 +12,6 @@ import {
   Zap, Database, Terminal, Smartphone, Globe,
   Clock, Award, Users, ShieldCheck, Check
 } from 'lucide-react'
-import appibriumBanner from './assets/social_cover.png'
 import './App.css'
 
 // ── Animation Variants ───────────────────────────────────────────
@@ -477,11 +476,13 @@ export default function App() {
               <div className="about-visual-card">
                 <img src="/logos/lockup/lockup_light.svg" alt="Appibrium" width={130} height={36} />
                 <div className="about-divider" aria-hidden="true" />
-                <img
-                  src={appibriumBanner}
-                  alt="Appibrium team and workspace"
+                <iframe
+                  src="https://www.youtube.com/embed/et3HzmdgwcY?si=LLceXCnmra_Q1QFy"
+                  title="YouTube video player"
                   className="about-banner"
-                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
                 />
                 <p className="about-card-sub">Appibrium Technology Co.</p>
               </div>
