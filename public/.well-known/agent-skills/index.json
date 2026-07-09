@@ -1,4 +1,12 @@
 {
   "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
-  "skills": []
+  "skills": [
+    {
+      "name": "get-brand-info",
+      "type": "skill-md",
+      "description": "Get corporate details, services, contact info, and products of Appibrium Technology Co.",
+      "url": "https://appibrium.com/.well-known/agent-skills/get-brand-info.md",
+      "digest": "sha256:1bf47c0891a43185cc5d76b1c2b446cde8bb6babbb5325317818e028abfd95fc"
+    }
+  ]
 }
