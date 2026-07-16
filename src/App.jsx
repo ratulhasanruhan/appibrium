@@ -250,12 +250,38 @@ export default function App() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setFormState('sending')
+
+    const formData = new FormData(e.target)
+    
+    // Client-side honeypot check
+    if (formData.get('_gotcha')) {
+      // Quietly succeed to fool spam bots
+      setFormState('success')
+      e.target.reset()
+      setTimeout(() => setFormState('idle'), 8000)
+      return
+    }
+
+    const payload = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      service: formData.get('service'),
+      message: formData.get('message'),
+    }
+
     try {
-      const res = await fetch('https://formspree.io/f/mnnvewee', {
+      const apiUrl = import.meta.env.VITE_CRM_API_URL || 'http://localhost:3000/api/inquiries'
+      const apiKey = import.meta.env.VITE_INQUIRY_API_KEY || 'appibrium_secret_inquiry_key_2026'
+
+      const res = await fetch(apiUrl, {
         method: 'POST',
-        body: new FormData(e.target),
-        headers: { Accept: 'application/json' }
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Appibrium-API-Key': apiKey
+        },
+        body: JSON.stringify(payload)
       })
+
       if (res.ok) {
         setFormState('success')
         e.target.reset()
@@ -263,7 +289,8 @@ export default function App() {
       } else {
         throw new Error()
       }
-    } catch {
+    } catch (err) {
+      console.error('Failed to submit project inquiry:', err)
       setFormState('error')
       setTimeout(() => setFormState('idle'), 6000)
     }
@@ -1029,6 +1056,7 @@ export default function App() {
                 <li><button onClick={() => scrollTo('process')}>How We Build</button></li>
                 <li><button onClick={() => scrollTo('products')}>Originals Portfolio</button></li>
                 <li><a href="/works">All Client Works</a></li>
+                <li><a href="https://studio.appibrium.com" target="_blank" rel="noopener noreferrer">Client Portal</a></li>
                 <li><a href="https://appibrium.github.io" target="_blank" rel="noopener noreferrer">Media Kit</a></li>
                 <li><a href="/legal" target="_blank" rel="noopener noreferrer">Legal &amp; Privacy</a></li>
                 <li><a href="https://careers.appibrium.com" target="_blank" rel="noopener noreferrer">Careers</a></li>
