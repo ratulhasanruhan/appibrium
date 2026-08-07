@@ -126,5 +126,19 @@
     ],
     "image": "https://ratulhasanruhan.github.io/assets/projects/care_life_touch.webp",
     "link": "https://play.google.com/store/apps/details?id=com.appibrium.carelifetouch"
+  },
+  {
+    "title": "Ki Lagbe?",
+    "category": "E-commerce",
+    "description": "An all-in-one hyperlocal delivery & e-commerce platform connecting users with local restaurants, groceries, pharmacy services, and real-time parcel delivery.",
+    "technologies": [
+      "Flutter",
+      "Firebase",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
+    "image": "https://play-lh.googleusercontent.com/8N7mhNZWfENXvbLyQVQ2apIM1KGXIC41uT1CmEQewMdzOEu1QwwHgYTQFdYTxS_cIVFoA2vZWXUUA4tDj6Rweg",
+    "link": "https://play.google.com/store/apps/details?id=com.itflor.kilagbeuser"
   }
 ]

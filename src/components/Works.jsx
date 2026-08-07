@@ -20,13 +20,16 @@ import projectsData from '../lib/projects.json'
 const categoryIcons = {
   "AI/IoT Solution": <Brain className="w-5 h-5" />,
   "Educational Technology": <GraduationCap className="w-5 h-5" />,
+  "EdTech": <GraduationCap className="w-5 h-5" />,
   "AI/ML Solution": <Brain className="w-5 h-5" />,
   "Healthcare Technology": <Heart className="w-5 h-5" />,
+  "Healthcare": <Heart className="w-5 h-5" />,
   "Educational Management": <Building2 className="w-5 h-5" />,
   "Digital Learning Platform": <Monitor className="w-5 h-5" />,
   "Business Solution": <Building2 className="w-5 h-5" />,
   "Personal Branding": <Users className="w-5 h-5" />,
-  "Social Platform": <Globe className="w-5 h-5" />
+  "Social Platform": <Globe className="w-5 h-5" />,
+  "E-commerce": <Smartphone className="w-5 h-5" />
 }
 
 export default function Works() {

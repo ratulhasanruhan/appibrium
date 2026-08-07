@@ -45,6 +45,7 @@ Appibrium is an engineering-driven technology company that designs, builds, and 
 - Richminis — High-performance e-commerce platform
 - Ilmpurity — LMS with AI-based exam system using RAG and Computer Vision
 - Care Life Touch — Healthcare and medicine delivery with prescription parsing
+- Ki Lagbe? — Hyperlocal delivery & e-commerce platform (Mobile App)
 
 ## Technology Stack
 
